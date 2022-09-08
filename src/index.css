@@ -1,0 +1,197 @@
+:root {
+
+  /*****************
+    COLOR VARIABLES 
+   *****************/
+
+  --prim-pink-500: hsl(337, 48%, 49%);
+  /* #ba4270 */
+  --prim-pink-300: hsl(337, 46%, 75%);
+  /* #dca0b7 */
+
+
+  --neutral-white: hsl(220, 60%, 99%);
+  /* #fbfcfe */
+
+  --sec-blue-300: hsl(207, 16%, 50%);
+  /* #6c8294 */
+  --sec-blue-500: hsl(207, 33%, 32%);
+  /* #36536b */
+  --sec-blue-700: hsl(207, 27%, 15%);
+  /* #1b262f */
+
+  --sec-pink: hsl(337, 60%, 64%);
+  /* #da6d97 */
+
+
+  /*******
+    FONTS
+   *******/
+  font-family: 'DM Serif Display', serif;
+  color: var(--sec-blue-500);
+  font-weight: 400;
+
+}
+
+/********
+  RESETS
+ ********/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+nav ul {
+  list-style: none;
+}
+
+
+/* 
+ * Resets from 
+ * https://www.joshwcomeau.com/css/ custom-css-reset/ 
+ */
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+/* Use a more-intuitive box-sizing model.*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Add accessible line-height */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Create a root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+
+/********************
+  DESKTOP TYPOGRAPHY
+ ********************/
+h1 {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+h4{
+  color: var(--prim-pink-500);
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+p {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.938rem;
+  line-height: 1.75rem;
+  color: var(--sec-blue-700);
+}
+
+
+/*******************
+  TABLET TYPOGRAPHY
+ *******************/
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 2.875rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 2.875rem;
+  }
+
+  h3 {
+    /* font-family: 'Public Sans', sans-serif; */
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+}
+
+/*******************
+  MOBILE TYPOGRAPHY
+ *******************/
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 2.313rem;
+    letter-spacing: -0.104rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.375rem;
+    text-align: justify;
+    letter-spacing: 0.365rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+}
