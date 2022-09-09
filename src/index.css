@@ -13,6 +13,8 @@
   --neutral-white: hsl(220, 60%, 99%);
   /* #fbfcfe */
 
+  --neutral-gray: #979797;
+
   --sec-blue-300: hsl(207, 16%, 50%);
   /* #6c8294 */
   --sec-blue-500: hsl(207, 33%, 32%);
@@ -152,22 +154,11 @@ p {
 @media (max-width: 768px) {
   h1 {
     font-size: 3rem;
-    line-height: 2.875rem;
+    line-height: 3.5rem;
   }
 
-  h2 {
-    font-size: 3rem;
-    line-height: 2.875rem;
-  }
-
-  h3 {
-    /* font-family: 'Public Sans', sans-serif; */
+  h4{
     font-size: 1.5rem;
-    line-height: 2.5rem;
-  }
-
-  p {
-    font-size: 1rem;
   }
 
 }
@@ -177,21 +168,29 @@ p {
  *******************/
 @media (max-width: 480px) {
   h1 {
-    font-size: 2.5rem;
-    line-height: 2.313rem;
-    letter-spacing: -0.104rem;
+    font-size: 2rem;
+    line-height: 2.25rem;
   }
 
   h2 {
-    font-size: 1rem;
-    font-style: normal;
-    line-height: 1.375rem;
-    text-align: justify;
-    letter-spacing: 0.365rem;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  h4{
+    line-height: 2rem;
   }
 
   p {
-    font-size: 1rem;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.938rem;
+    line-height: 1.75rem;
+    color: var(--sec-blue-700);
   }
 
 }
