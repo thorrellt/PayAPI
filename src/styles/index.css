@@ -343,6 +343,7 @@ textarea:focus {
   width: 24px;
   background-color: var(--sec-blue-500);
   opacity: 0.25;
+  transition: all .2s ease-in-out;
 }
 
 /* On mouse-over, add opacity */
