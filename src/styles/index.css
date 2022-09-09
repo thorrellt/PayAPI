@@ -207,7 +207,7 @@ button {
   font-weight: 700;
   padding: 0.875rem 1.5rem;
   border-radius: 24px;
-  transition: all .2s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 .prim-btn {
@@ -216,7 +216,7 @@ button {
   box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
 }
 
-.prim-btn:hover {
+.prim-btn:active {
   background-color: var(--sec-pink);
 }
 
@@ -230,7 +230,7 @@ button {
   border: 1px solid var(--sec-blue-500);
 }
 
-.sec-btn-light:hover {
+.sec-btn-light:active:enabled  {
   color: var(--neutral-white);
   background-color: var(--sec-blue-500);
   border: 1px solid var(--neutral-white);
@@ -243,13 +243,12 @@ button {
 }
 
 .sec-btn-dark {
-
   color: var(--neutral-white);
   background-color: var(--sec-blue-700);
   border: 1px solid var(--neutral-white);
 }
 
-.sec-btn-dark:hover {
+.sec-btn-dark:active:enabled  {
   color: var(--sec-blue-500);
   background-color: var(--neutral-white);
   border: 1px solid var(--sec-blue-700);
@@ -261,16 +260,37 @@ button {
   border: 1px solid var(--neutral-gray);
 }
 
+@media (min-width: 769px) {
+
+  .prim-btn:hover:enabled  {
+    background-color: var(--sec-pink);
+  }
+
+  .sec-btn-light:hover:enabled {
+    color: var(--neutral-white);
+    background-color: var(--sec-blue-500);
+    border: 1px solid var(--neutral-white);
+  }
+
+  .sec-btn-dark:hover:enabled  {
+    color: var(--sec-blue-500);
+    background-color: var(--neutral-white);
+    border: 1px solid var(--sec-blue-700);
+  }
+
+}
+
+
 /****************
   INPUT PRESETS 
  ****************/
 
-.input-wrapper{
+.input-wrapper {
   display: flex;
   flex-direction: column-reverse;
 }
 
-.input-error{
+.input-error {
   opacity: 1;
   color: var(--error-red);
   border-color: var(--error-red);
@@ -289,7 +309,7 @@ label {
 }
 
 input:focus+label,
-textarea:focus+label{
+textarea:focus+label {
   opacity: 1;
 }
 
@@ -347,12 +367,12 @@ textarea:focus {
 }
 
 /* On mouse-over, add opacity */
-.checkbox-wrapper:hover input ~ .checkmark {
+.checkbox-wrapper:hover input~.checkmark {
   opacity: .4;
 }
 
 /* When the checkbox is checked*/
-.checkbox-wrapper input:checked ~ .checkmark {
+.checkbox-wrapper input:checked~.checkmark {
   background-color: var(--prim-pink-500);
   opacity: 1;
 }
@@ -365,7 +385,7 @@ textarea:focus {
 }
 
 /* Show the checkmark when checked */
-.checkbox-wrapper input:checked ~ .checkmark:after {
+.checkbox-wrapper input:checked~.checkmark:after {
   display: block;
 }
 
@@ -381,6 +401,6 @@ textarea:focus {
 }
 
 /* style when input is disabled */
-.checkbox-wrapper input:disabled ~ .checkmark {
+.checkbox-wrapper input:disabled~.checkmark {
   opacity: .05;
 }
