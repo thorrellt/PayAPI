@@ -13,6 +13,8 @@
   --neutral-white: hsl(220, 60%, 99%);
   /* #fbfcfe */
 
+  --error-red: #FF0000;
+
   --neutral-gray: #979797;
 
   --sec-blue-300: hsl(207, 16%, 50%);
@@ -201,12 +203,12 @@ p {
 button {
   font-family: 'Public Sans', sans-serif;
   font-size: 0.938rem;
-  line-height: 18px;
+  line-height: 1.125rem;
   font-weight: 700;
   padding: 0.875rem 1.5rem;
   border-radius: 24px;
   transition: all .2s ease-in-out;
-} 
+}
 
 .prim-btn {
   color: var(--neutral-white);
@@ -241,7 +243,7 @@ button {
 }
 
 .sec-btn-dark {
-  
+
   color: var(--neutral-white);
   background-color: var(--sec-blue-700);
   border: 1px solid var(--neutral-white);
@@ -257,4 +259,127 @@ button {
   color: var(--neutral-gray);
   background-color: var(--sec-blue-700);
   border: 1px solid var(--neutral-gray);
+}
+
+/****************
+  INPUT PRESETS 
+ ****************/
+
+.input-wrapper{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.input-error{
+  opacity: 1;
+  color: var(--error-red);
+  border-color: var(--error-red);
+}
+
+label {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.938rem;
+  line-height: 1.563rem;
+  color: var(--sec-blue-500);
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  display: block;
+
+}
+
+input:focus+label,
+textarea:focus+label{
+  opacity: 1;
+}
+
+input,
+textarea {
+  border-bottom: 1px solid var(--sec-blue-500);
+  opacity: 0.5;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  opacity: 1.0;
+}
+
+
+/*****************
+  CUSTOM CHECKBOX 
+ *****************/
+
+/* 
+  Code altered from 
+  https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
+*/
+
+/* Customize the label (the container) */
+.checkbox-wrapper {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  opacity: 1;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: var(--sec-blue-500);
+  opacity: 0.25;
+}
+
+/* On mouse-over, add opacity */
+.checkbox-wrapper:hover input ~ .checkmark {
+  opacity: .4;
+}
+
+/* When the checkbox is checked*/
+.checkbox-wrapper input:checked ~ .checkmark {
+  background-color: var(--prim-pink-500);
+  opacity: 1;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrapper input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-wrapper .checkmark:after {
+  left: 8px;
+  top: 4px;
+  width: 7px;
+  height: 13px;
+  border: solid var(--neutral-white);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* style when input is disabled */
+.checkbox-wrapper input:disabled ~ .checkmark {
+  opacity: .05;
 }
