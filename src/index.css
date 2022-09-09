@@ -117,7 +117,7 @@ h6 {
 
 
 /********************
-  DESKTOP TYPOGRAPHY
+  DESKTOP TYPOGRAPHY 
  ********************/
 h1 {
   font-size: 4.5rem;
@@ -134,7 +134,7 @@ h3 {
   line-height: 2.5rem;
 }
 
-h4{
+h4 {
   color: var(--prim-pink-500);
   font-size: 2rem;
   line-height: 2.5rem;
@@ -157,7 +157,7 @@ p {
     line-height: 3.5rem;
   }
 
-  h4{
+  h4 {
     font-size: 1.5rem;
   }
 
@@ -182,7 +182,7 @@ p {
     line-height: 2rem;
   }
 
-  h4{
+  h4 {
     line-height: 2rem;
   }
 
@@ -193,4 +193,68 @@ p {
     color: var(--sec-blue-700);
   }
 
+}
+
+/****************
+  BUTTON PRESETS 
+ ****************/
+button {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.938rem;
+  line-height: 18px;
+  font-weight: 700;
+  padding: 0.875rem 1.5rem;
+  border-radius: 24px;
+  transition: all .2s ease-in-out;
+} 
+
+.prim-btn {
+  color: var(--neutral-white);
+  background-color: var(--prim-pink-500);
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+}
+
+.prim-btn:hover {
+  background-color: var(--sec-pink);
+}
+
+.prim-btn:disabled {
+  background-color: var(--prim-pink-300);
+}
+
+.sec-btn-light {
+  color: var(--sec-blue-500);
+  background-color: var(--neutral-white);
+  border: 1px solid var(--sec-blue-500);
+}
+
+.sec-btn-light:hover {
+  color: var(--neutral-white);
+  background-color: var(--sec-blue-500);
+  border: 1px solid var(--neutral-white);
+}
+
+.sec-btn-light:disabled {
+  color: var(--neutral-gray);
+  background-color: var(--neutral-white);
+  border: 1px solid var(--neutral-gray);
+}
+
+.sec-btn-dark {
+  
+  color: var(--neutral-white);
+  background-color: var(--sec-blue-700);
+  border: 1px solid var(--neutral-white);
+}
+
+.sec-btn-dark:hover {
+  color: var(--sec-blue-500);
+  background-color: var(--neutral-white);
+  border: 1px solid var(--sec-blue-700);
+}
+
+.sec-btn-dark:disabled {
+  color: var(--neutral-gray);
+  background-color: var(--sec-blue-700);
+  border: 1px solid var(--neutral-gray);
 }
