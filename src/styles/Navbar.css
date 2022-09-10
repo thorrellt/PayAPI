@@ -1,0 +1,15 @@
+.Navbar {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    width: 100%;
+    padding-inline: 1.5rem;
+    margin-block-start: 2.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navbar .menu-toggle {
+    width: 28px;
+    height: 17px;
+}

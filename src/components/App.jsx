@@ -1,10 +1,31 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/App.css'
 import Home from './Home'
+import Navbar from './Navbar'
 
 function App() {
 
-  const [isChecked, setIsChecked] = useState(false)
+   /********
+    STATES
+   ********/
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  
+
+  /***********************
+    FUNCTIONS & LISTENERS
+   ***********************/
+  //Update windowWidth State on width Change
+  useEffect(() => {
+    function watchWidth() {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener("resize", watchWidth)
+
+    return function () {
+      window.removeEventListener("resize", watchWidth)
+    }
+  }, [])
 
   const onCheckClick = () => {
     setIsChecked(prevIsChecked => !prevIsChecked)
@@ -12,7 +33,8 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
+      <Navbar windowWidth={windowWidth}/>
+      <Home windowWidth={windowWidth}/>
     </div>
   )
 }
