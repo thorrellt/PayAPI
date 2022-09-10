@@ -118,6 +118,10 @@ h6 {
 }
 
 
+.flex-container{
+  display: flex;
+}
+
 /********************
   DESKTOP TYPOGRAPHY 
  ********************/
@@ -172,6 +176,7 @@ p {
   h1 {
     font-size: 2rem;
     line-height: 2.25rem;
+    letter-spacing: -0.57px;
   }
 
   h2 {
