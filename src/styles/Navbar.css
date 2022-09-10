@@ -9,7 +9,149 @@
     align-items: center;
 }
 
-.Navbar .menu-toggle {
+.Navbar .menu-wrapper{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: var(--sec-blue-700) ;
+    width: 18.75rem;
+
+}
+.Navbar .menu-wrapper .exit-wrapper{
+    flex-basis: 6rem;
+    width: 90%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--neutral-white);
+    height: 6rem;
+}
+
+.Navbar .menu-exit-btn {
+    padding: 0;
+}
+
+.Navbar .menu-exit-btn .close{
+    width: 22px;
+    height: 23px;
+    margin-block-end: 1.5rem ;
+} 
+.Navbar ul {
+    margin-top: 3rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    list-style-type: none;
+}
+
+.Navbar ul li {
+    text-decoration: none;
+    color: white;
+}
+
+.Navbar ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+.Navbar .menu-toggle-btn .hamburger{
+    margin-left: auto;
     width: 28px;
     height: 17px;
+} 
+
+
+
+
+
+
+/************
+  ANIMATIONS
+ ************/
+ /* Animation Classes */
+.show {
+    transform: translateY(0);
+    animation: exitToTop .5s ease-in-out;
+}
+
+.hidden {
+    transform: translateY(-200%);
+    animation: exitToTop .5s ease-in-out;
+}
+
+.menu-toggle-btn-enter {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toggle-btn-enter-active {
+    animation: fadeIn .3s ease-in-out;
+}
+
+.menu-toggle-btn-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu-toggle-btn-exit-active {
+    animation: fadeOut .3s ease-in-out;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes enterFromTop {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes exitToTop {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+        top: -200px;
+    }
 }
