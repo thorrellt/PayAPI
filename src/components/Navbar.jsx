@@ -31,7 +31,7 @@ export default function Navbar(props) {
             }
 
             <div className={`${navActive ? 'show' : 'hidden'} flex-container menu-wrapper`}>
-                <div className="exit-wrapper">
+                <div className="flex-container exit-wrapper">
                     <button onClick={toggleNav} className='menu-exit-btn'>
                         <img src={close} className='close' />
                     </button>

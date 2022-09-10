@@ -10,25 +10,24 @@
 }
 
 .Navbar .menu-wrapper{
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     position: fixed;
-    height: 100vh;
     top: 0;
     right: 0;
-    background-color: var(--sec-blue-700) ;
+    flex-direction: column;
+    height: 100vh;
     width: 18.75rem;
-
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--sec-blue-700) ;
+    opacity: .98;
 }
+
 .Navbar .menu-wrapper .exit-wrapper{
     flex-basis: 6rem;
-    width: 90%;
-    display: flex;
+    width: 85%;
     align-items: flex-end;
     justify-content: flex-end;
     border-bottom: 1px solid var(--neutral-white);
-    height: 6rem;
 }
 
 .Navbar .menu-exit-btn {
@@ -42,7 +41,6 @@
 } 
 .Navbar ul {
     margin-top: 3rem;
-    
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -69,22 +67,18 @@
 } 
 
 
-
-
-
-
 /************
   ANIMATIONS
  ************/
  /* Animation Classes */
 .show {
-    transform: translateY(0);
-    animation: exitToTop .5s ease-in-out;
+    transform: translateX(0);
+    animation: enterFromRight .5s ease-in-out;
 }
 
 .hidden {
-    transform: translateY(-200%);
-    animation: exitToTop .5s ease-in-out;
+    transform: translateX(100%);
+    animation: exitToRight .5s ease-in-out;
 }
 
 .menu-toggle-btn-enter {
@@ -107,51 +101,26 @@
 
 
 /* Animations */
-@keyframes fadeIn {
+@keyframes enterFromRight {
     0% {
+        transform: translateX(100%);
         opacity: 0;
-        transform: scale(0);
     }
 
     100% {
-        opacity: 1;
-        transform: scale(1);
+        transform: translateX(0px);
+        opacity: .98;
     }
 }
 
-@keyframes fadeOut {
+@keyframes exitToRight {
     0% {
-        opacity: 1;
-        transform: scale(1);
+        transform: translateX(0px);
+        opacity: .98;
     }
 
     100% {
+        transform: translateX(100%);
         opacity: 0;
-        transform: scale(0);
-    }
-}
-
-@keyframes enterFromTop {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes exitToTop {
-    0% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-100%);
-        opacity: 0;
-        top: -200px;
     }
 }
