@@ -118,7 +118,7 @@ h6 {
 }
 
 
-.flex-container{
+.flex-container {
   display: flex;
 }
 
@@ -144,6 +144,12 @@ h4 {
   color: var(--prim-pink-500);
   font-size: 2rem;
   line-height: 2.5rem;
+}
+
+h5 {
+  font-family: 'Public Sans';
+  font-weight: 700;
+  font-size: 1.125rem;
 }
 
 p {
@@ -236,7 +242,7 @@ button {
   border: 1px solid var(--sec-blue-500);
 }
 
-.sec-btn-light:active:enabled  {
+.sec-btn-light:active:enabled {
   color: var(--neutral-white);
   background-color: var(--sec-blue-500);
   border: 1px solid var(--neutral-white);
@@ -254,7 +260,7 @@ button {
   border: 1px solid var(--neutral-white);
 }
 
-.sec-btn-dark:active:enabled  {
+.sec-btn-dark:active:enabled {
   color: var(--sec-blue-500);
   background-color: var(--neutral-white);
   border: 1px solid var(--sec-blue-700);
@@ -268,7 +274,7 @@ button {
 
 @media (min-width: 769px) {
 
-  .prim-btn:hover:enabled  {
+  .prim-btn:hover:enabled {
     background-color: var(--sec-pink);
   }
 
@@ -278,7 +284,7 @@ button {
     border: 1px solid var(--neutral-white);
   }
 
-  .sec-btn-dark:hover:enabled  {
+  .sec-btn-dark:hover:enabled {
     color: var(--sec-blue-500);
     background-color: var(--neutral-white);
     border: 1px solid var(--sec-blue-700);
