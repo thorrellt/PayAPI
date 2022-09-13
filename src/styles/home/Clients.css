@@ -8,6 +8,7 @@
 
 .Clients .client-logos{
     position: relative;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3.5rem;
@@ -17,7 +18,7 @@
 }
 .Clients .client-logos .bgCircle-container{
     position: absolute;
-    overflow: hidden;
+    
     width: 780px;
     left: 50%;
     top:-700px;
