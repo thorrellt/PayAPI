@@ -1,3 +1,4 @@
+
 .Footer .cta {
     margin-inline: 1.5rem;
     padding-block-end: 5rem;
@@ -14,6 +15,8 @@
 }
 
 .Footer footer {
+    position: relative;
+    overflow: hidden;
     padding-block: 2.5rem 3.5rem;
     flex-direction: column;
     align-items: center;
@@ -54,3 +57,15 @@
     filter: invert(82%) sepia(26%) saturate(93%) hue-rotate(195deg) brightness(114%) contrast(99%);
 }
 
+.Footer .bgCircle-container{
+    position: absolute;
+    width: 780px;
+    left: 50%;
+    bottom:-600px;
+    transform: translate(-50%, 0);
+}
+.Footer .bgCircle {
+    z-index: -10;
+    width: 780px;
+    height: 780px;
+}

@@ -15,10 +15,10 @@ export default function Navbar(props) {
 
 
     //Eliminates slide animation on 1st load
-    useEffect(()=>{
+    useEffect(() => {
         const menu = document.getElementById('navMenu');
         menu.classList.remove('slide-right')
-    },[])
+    }, [])
 
     const toggleNav = () => {
         setNavActive(prevNavState => !prevNavState)
@@ -38,8 +38,10 @@ export default function Navbar(props) {
 
     return (
         <div className="Navbar flex-container" id='Navbar'>
-            <img src={logo} alt="PayAPI logo"
-                className='logo' />
+            <a href="#Home">
+                <img src={logo} alt="PayAPI logo"
+                    className='logo' />
+            </a>
 
 
             {/* mobile menu toggle button animation logic */}
