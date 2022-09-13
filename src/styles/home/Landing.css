@@ -1,9 +1,11 @@
 .Landing{
     overflow: hidden;
+    height: 100vh;
+    position: relative;
 }
 
 .Landing .bgCircle-container{
-    position: fixed;
+    position: absolute;
     width: 780px;
     left: 50%;
     top:-550px;

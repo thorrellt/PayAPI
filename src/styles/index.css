@@ -213,6 +213,7 @@ button {
   padding: 0.875rem 1.5rem;
   border-radius: 24px;
   transition: all .25s ease-in-out;
+  cursor: pointer;
 }
 
 .prim-btn {
