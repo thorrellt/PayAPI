@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import '../styles/App.css'
 import Home from './Home'
 import Navbar from './shared/Navbar'
+import Footer from './shared/Footer'
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
     <div className="App">
       <Navbar windowWidth={windowWidth}/>
       <Home windowWidth={windowWidth}/>
+      <Footer windowWidth={windowWidth}/>
     </div>
   )
 }

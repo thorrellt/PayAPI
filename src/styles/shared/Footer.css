@@ -1,0 +1,56 @@
+.Footer .cta {
+    margin-inline: 1.5rem;
+    padding-block-end: 5rem;
+
+}
+
+.Footer .cta h2 {
+    text-align: center;
+}
+
+.Footer .cta .cta-form{
+    margin-block-start: 2rem;
+    text-align: center;
+}
+
+.Footer footer {
+    padding-block: 2.5rem 3.5rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: var(--sec-blue-700);
+    
+}
+
+.Footer footer ul{
+    margin-block-start: 2.5rem;
+    flex-direction: column;
+    gap: 1.875rem;
+    align-items: center;
+    list-style-type: none;
+}
+
+.Footer footer ul li a{
+    color: var(--neutral-white)  
+}
+
+.Footer footer ul li a{
+    text-decoration: none;
+    color: var(--neutral-white)
+    
+}
+
+.Footer footer a img{
+    filter: invert(82%) sepia(26%) saturate(93%) hue-rotate(195deg) brightness(114%) contrast(99%);
+}
+
+.Footer footer .contacts{
+    margin-block-start: 2.5rem;
+    gap: 1.5rem;
+}
+
+
+.Footer footer .contacts .contact{
+    filter: invert(82%) sepia(26%) saturate(93%) hue-rotate(195deg) brightness(114%) contrast(99%);
+}
+
