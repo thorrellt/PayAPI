@@ -7,6 +7,7 @@ import hewlettPackard from '../../assets/shared/desktop/hewlett-packard.svg'
 import oracle from '../../assets/shared/desktop/oracle.svg'
 import google from '../../assets/shared/desktop/google.svg'
 import nvidia from '../../assets/shared/desktop/nvidia.svg'
+import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 
 
 export default function Clients() {
@@ -19,6 +20,12 @@ export default function Clients() {
                 <img src={oracle} alt="oracle" className="logo" />
                 <img src={google} alt="google" className="logo" />
                 <img src={nvidia} alt="nvidia" className="logo" />
+                <div className="flex-container bgCircle-container">
+                    <img
+                        src={bgCircle}
+                        className='bgCircle'
+                        alt="" />
+                </div>
 
             </div>
 
