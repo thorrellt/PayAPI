@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
-import '../styles/Navbar.css'
+import '../../styles/shared/Navbar.css'
 import {
     TransitionGroup,
     SwitchTransition,
     CSSTransition
 } from 'react-transition-group';
-import logo from '../assets/shared/desktop/logo.svg'
-import menu from '../assets/shared/mobile/menu.svg'
-import close from '../assets/shared/mobile/close.svg'
+import logo from '../../assets/shared/desktop/logo.svg'
+import menu from '../../assets/shared/mobile/menu.svg'
+import close from '../../assets/shared/mobile/close.svg'
 
 export default function Navbar(props) {
     const windowWidth = props.windowWidth

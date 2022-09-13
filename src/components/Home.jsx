@@ -3,6 +3,7 @@ import '../styles/Home.css'
 import Landing from './home/Landing'
 import Clients from './home/Clients'
 import Hero from './home/Hero'
+import Footer from './shared/Footer'
 
 export default function Home(props) {
     return (
@@ -14,6 +15,9 @@ export default function Home(props) {
                 windowWidth={props.windowWidth}
             />
             <Hero
+                windowWidth={props.windowWidth}
+            />
+            <Footer
                 windowWidth={props.windowWidth}
             />
 

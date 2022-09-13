@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import '../styles/App.css'
 import Home from './Home'
-import Navbar from './Navbar'
+import Navbar from './shared/Navbar'
 
 function App() {
 
