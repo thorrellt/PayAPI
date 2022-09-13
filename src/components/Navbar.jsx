@@ -24,8 +24,20 @@ export default function Navbar(props) {
         setNavActive(prevNavState => !prevNavState)
     }
 
+    //NAV BAR SCROLL CONTROLS
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("Navbar").style.top = "0";
+        } else {
+            document.getElementById("Navbar").style.top = "-80px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
     return (
-        <div className="Navbar flex-container">
+        <div className="Navbar flex-container" id='Navbar'>
             <img src={logo} alt="PayAPI logo"
                 className='logo' />
 
