@@ -20,13 +20,6 @@ export default function Clients() {
                 <img src={oracle} alt="oracle" className="logo" />
                 <img src={google} alt="google" className="logo" />
                 <img src={nvidia} alt="nvidia" className="logo" />
-                <div className="flex-container bgCircle-container">
-                    <img
-                        src={bgCircle}
-                        className='bgCircle'
-                        alt="" />
-                </div>
-
             </div>
 
             <div className="content flex-container">
@@ -38,7 +31,12 @@ export default function Clients() {
                     About Us
                 </button>
             </div>
-
+            <div className="flex-container bgCircle-container">
+                <img
+                    src={bgCircle}
+                    className='bgCircle'
+                    alt="" />
+            </div>
         </div>
     )
 }
