@@ -73,30 +73,18 @@
  /* Animation Classes */
 .show {
     transform: translateX(0);
+}
+
+.slide-left {
     animation: enterFromRight .5s ease-in-out;
 }
 
 .hidden {
     transform: translateX(100%);
+}
+
+.slide-right {
     animation: exitToRight .5s ease-in-out;
-}
-
-.menu-toggle-btn-enter {
-    opacity: 0;
-    transform: scale(0);
-}
-
-.menu-toggle-btn-enter-active {
-    animation: fadeIn .3s ease-in-out;
-}
-
-.menu-toggle-btn-exit {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.menu-toggle-btn-exit-active {
-    animation: fadeOut .3s ease-in-out;
 }
 
 

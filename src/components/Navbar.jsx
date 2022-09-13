@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/Navbar.css'
 import {
     TransitionGroup,
@@ -12,6 +12,13 @@ import close from '../assets/shared/mobile/close.svg'
 export default function Navbar(props) {
     const windowWidth = props.windowWidth
     const [navActive, setNavActive] = useState(false)
+
+
+    //Eliminates slide animation on 1st load
+    useEffect(()=>{
+        const menu = document.getElementById('navMenu');
+        menu.classList.remove('slide-right')
+    },[])
 
     const toggleNav = () => {
         setNavActive(prevNavState => !prevNavState)
@@ -30,7 +37,7 @@ export default function Navbar(props) {
                 </button>
             }
 
-            <div className={`${navActive ? 'show' : 'hidden'} flex-container menu-wrapper`}>
+            <div id='navMenu' className={`${navActive ? 'show' : 'hidden'} ${navActive ? 'slide-left' : 'slide-right'} flex-container menu-wrapper`}>
                 <div className="flex-container exit-wrapper">
                     <button onClick={toggleNav} className='menu-exit-btn'>
                         <img src={close} className='close' />
