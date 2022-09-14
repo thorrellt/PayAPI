@@ -151,7 +151,6 @@
         flex-shrink: 0;
         width: auto;
         gap: 2.5rem;
-        border:1px solid black ;
     }
     .Navbar ul li a{
         color: var(--sec-blue-500);
