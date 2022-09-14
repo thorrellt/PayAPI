@@ -27,7 +27,6 @@
 .Landing .phone-mockup {
     height: 240px;
     filter: drop-shadow(10px 10px 25px rgba(54, 83, 107, .5));
-    /* box-shadow: 10px 10px 25px 10px rgba(54, 83, 107, 0.25); */
 }
 
 .Landing .cta {
@@ -77,8 +76,69 @@
         margin-inline: 4rem;
     }
 
-    .Landing .cta .cta-form .prim-btn{
-       position: absolute;
-       right: 0;
+    .Landing .cta .cta-form .prim-btn {
+        position: absolute;
+        right: 0;
+    }
+}
+
+/********
+  DESKTOP
+ ********/
+@media (min-width: 992px) {
+    .Landing {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 10.25rem;
+        padding-block-start: 1rem;
+    }
+
+    .Landing .cta {
+        flex-direction: column;
+        flex-basis: 36rem;
+        margin: 0;
+        gap: normal;
+    }
+
+    .Landing .cta h1 {
+        text-align: left;
+    }
+
+    .Landing .cta .cta-form {
+        position: relative;
+        width: auto;
+        justify-content: flex-start;
+        margin-block: 2rem 1rem;
+        margin-inline: 0 6.25rem;
+    }
+
+    .Landing .cta p {
+        text-align: left;
+        padding-inline-start: 1.5rem;
+    }
+
+    .Landing .hero-img-wrapper {
+        padding-top: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Landing .phone-mockup {
+        height: auto;
+        filter: drop-shadow(10px 10px 25px rgba(54, 83, 107, .5));
+    }
+
+    .Landing .bgCircle-container {
+        width: 780px;
+        left: 800px;
+        top: -172px;
+        transform: translate(0, 0);
+    }
+
+    .Landing .bgCircle {
+        width: 780px;
+        height: 780px;
     }
 }
