@@ -13,6 +13,8 @@ export default function Navbar(props) {
     const windowWidth = props.windowWidth
     const [navActive, setNavActive] = useState(false)
 
+    const breakWidth = 680;
+
 
     //Eliminates slide animation on 1st load
     useEffect(() => {
@@ -38,25 +40,32 @@ export default function Navbar(props) {
 
     return (
         <div className="Navbar flex-container" id='Navbar'>
-            <a href="#Home">
-                <img src={logo} alt="PayAPI logo"
-                    className='logo' />
-            </a>
-
-
-            {/* mobile menu toggle button animation logic */}
-            {windowWidth <= 900 &&
-                <button onClick={toggleNav} className='menu-toggle-btn'>
-                    <img src={menu} className='hamburger' />
-                </button>
+            {windowWidth < breakWidth &&
+                <a href="#Home" className='logo-link'>
+                    <img src={logo} alt="PayAPI logo"
+                        className='logo' />
+                </a>
             }
 
+            <button onClick={toggleNav} className='menu-toggle-btn'>
+                <img src={menu} className='hamburger' />
+            </button>
+
+
             <div id='navMenu' className={`${navActive ? 'show' : 'hidden'} ${navActive ? 'slide-left' : 'slide-right'} flex-container menu-wrapper`}>
-                <div className="flex-container exit-wrapper">
-                    <button onClick={toggleNav} className='menu-exit-btn'>
-                        <img src={close} className='close' />
-                    </button>
-                </div>
+                {windowWidth < breakWidth &&
+                    <div className="flex-container exit-wrapper">
+                        <button onClick={toggleNav} className='menu-exit-btn'>
+                            <img src={close} className='close' />
+                        </button>
+                    </div>
+                }
+                {windowWidth >= breakWidth &&
+                    <a href="#Home" className='logo-link'>
+                        <img src={logo} alt="PayAPI logo"
+                            className='logo' />
+                    </a>
+                }
                 <ul>
                     <li>
                         <a href="#">Pricing</a>
@@ -68,9 +77,10 @@ export default function Navbar(props) {
                         <a href="#">Contact</a>
                     </li>
                     <li>
-                        <button className="prim-btn">Schedule a Demo</button>
+                        <a href="#">This Project</a>
                     </li>
                 </ul>
+                <button className="prim-btn">Schedule a Demo</button>
             </div>
 
 

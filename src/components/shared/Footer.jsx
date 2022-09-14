@@ -46,13 +46,13 @@ export default function Footer() {
                     </a>
                 </div>
                 <div className="flex-container bgCircle-container">
-                <img
-                    src={bgCircle}
-                    className='bgCircle'
-                    alt="" />
-            </div>
+                    <img
+                        src={bgCircle}
+                        className='bgCircle'
+                        alt="" />
+                </div>
             </footer>
-            
+
         </div>
     )
 }

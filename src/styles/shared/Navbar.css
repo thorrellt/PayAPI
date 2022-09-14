@@ -10,7 +10,7 @@
     transition: all .25s ease-in-out;
 }
 
-.Navbar .menu-wrapper{
+.Navbar .menu-wrapper {
     position: fixed;
     top: 0;
     right: 0;
@@ -19,11 +19,11 @@
     width: 18.75rem;
     align-items: center;
     justify-content: flex-start;
-    background-color: var(--sec-blue-700) ;
+    background-color: var(--sec-blue-700);
     opacity: .98;
 }
 
-.Navbar .menu-wrapper .exit-wrapper{
+.Navbar .menu-wrapper .exit-wrapper {
     flex-basis: 6rem;
     width: 85%;
     align-items: flex-end;
@@ -35,11 +35,12 @@
     padding: 0;
 }
 
-.Navbar .menu-exit-btn .close{
+.Navbar .menu-exit-btn .close {
     width: 22px;
     height: 23px;
-    margin-block-end: 1.5rem ;
-} 
+    margin-block-end: 1.5rem;
+}
+
 .Navbar ul {
     margin-top: 3rem;
     display: flex;
@@ -60,17 +61,21 @@
     transition: all .2s ease-in-out;
 }
 
-.Navbar .menu-toggle-btn .hamburger{
+.Navbar .menu-wrapper .prim-btn {
+    margin-block-start: 2rem;
+}
+
+.Navbar .menu-toggle-btn .hamburger {
     margin-left: auto;
     width: 28px;
     height: 17px;
-} 
+}
 
 
 /************
   ANIMATIONS
  ************/
- /* Animation Classes */
+/* Animation Classes */
 .show {
     transform: translateX(0);
 }
@@ -111,4 +116,52 @@
         transform: translateX(100%);
         opacity: 0;
     }
+}
+
+@media (min-width: 680px) {
+
+    .Navbar {
+        flex-direction: row;
+    }
+
+    .Navbar .menu-exit-btn,
+    .Navbar .menu-toggle-btn {
+        display: none;
+    }
+
+    .Navbar .menu-wrapper {
+        position: static;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+    .hidden {
+        transform: translateX(0px);
+    }
+
+
+    .Navbar ul {
+        margin-top: 0;
+        flex-direction: row;
+        flex-basis: 22.5rem;
+        margin-inline: 1rem;
+        flex-shrink: 0;
+        width: auto;
+        gap: 2.5rem;
+        border:1px solid black ;
+    }
+    .Navbar ul li a{
+        color: var(--sec-blue-500);
+    }
+
+    .Navbar .menu-wrapper .prim-btn {
+        flex-grow: 0;
+        flex-shrink: 0;
+        margin-block-start: 0;
+        height: fit-content;
+    }
+
 }
