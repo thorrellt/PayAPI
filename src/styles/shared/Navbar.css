@@ -118,6 +118,9 @@
     }
 }
 
+/********
+  TABLET
+ ********/
 @media (min-width: 680px) {
 
     .Navbar {
@@ -163,4 +166,19 @@
         height: fit-content;
     }
 
+}
+
+/********
+  DESKTOP
+ ********/
+ @media (min-width: 992px) {
+    .Navbar .menu-wrapper {
+        margin-inline: 10.25rem;
+        gap: 4rem;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .Navbar .menu-wrapper .prim-btn {
+        margin-left: auto;
+    }
 }
