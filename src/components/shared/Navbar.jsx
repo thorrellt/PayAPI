@@ -33,7 +33,7 @@ export default function Navbar(props) {
         if (prevScrollpos > currentScrollPos) {
             document.getElementById("Navbar").style.top = "0";
         } else {
-            document.getElementById("Navbar").style.top = "-80px";
+            document.getElementById("Navbar").style.top = "-100px";
         }
         prevScrollpos = currentScrollPos;
     }

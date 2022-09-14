@@ -24,13 +24,14 @@
 }
 
 .Clients .client-logos {
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 3.5rem;
     row-gap: 2.5rem;
     padding-inline: 3.5rem;
     color: var(--neutral-white);
+    align-items: center;
+    justify-items: center;
 }
 
 .Clients .client-logos .logo {
@@ -45,7 +46,6 @@
 }
 
 .Clients .content h2 {
-    font-size: 2rem;
     text-align: center;
     color: var(--neutral-white);
 }
@@ -59,4 +59,34 @@
 
 .Clients .content .about-us-btn {
     margin-block-start: 3.75rem;
+}
+
+@media (min-width: 680px) {
+
+    .Clients .bgCircle-container {
+        width: 100vw;
+        left: 50%;
+        top: -500px;
+        transform: translate(-50%, 0);
+    }
+
+    .Clients .bgCircle {
+        z-index: -10;
+        width: 100vw;
+        height: 100vw;
+    }
+
+    .Clients .client-logos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .Clients .content {
+        margin-block-start: 4rem;
+        margin-inline: 9.75rem;
+    }
+
+    .Clients .content .about-us-btn {
+        margin-block-start: 2rem;
+    }
+
 }
