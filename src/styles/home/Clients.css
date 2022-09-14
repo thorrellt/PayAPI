@@ -67,11 +67,9 @@
         width: 100vw;
         left: 50%;
         top: -500px;
-        transform: translate(-50%, 0);
     }
 
     .Clients .bgCircle {
-        z-index: -10;
         width: 100vw;
         height: 100vw;
     }
@@ -87,6 +85,51 @@
 
     .Clients .content .about-us-btn {
         margin-block-start: 2rem;
+    }
+}
+
+/********
+  DESKTOP
+ ********/
+@media (min-width: 992px) {
+    .Clients {
+        flex-direction: row-reverse;
+        padding: 6.25rem 10.25rem;
+        gap: 8rem;
+
+    }
+
+    .Clients .content {
+        align-items: flex-start;
+        margin: 0;
+        flex: 0 0 28rem;
+    }
+
+    .Clients .content h2 {
+        text-align: left;
+        color: var(--neutral-white);
+    }
+
+    .Clients .content p {
+        margin-block-start: 1.5rem;
+        text-align: left;
+    }
+
+    .Clients .client-logos {
+        padding: 0;
+        flex: 0 1 50%;
+    }
+
+    .Clients .bgCircle-container {
+        width: 780px;
+        left: -235px;
+        top: -359px;
+        transform: translate(0, 0);
+    }
+
+    .Clients .bgCircle {
+        width: 780px;
+        height: 780px;
     }
 
 }
