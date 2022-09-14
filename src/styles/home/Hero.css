@@ -21,6 +21,11 @@
     
 }
 
+.Hero .features {
+    flex-direction: column;
+    align-items: center;
+}
+
 .Hero .feature {
     flex-direction: column;
     align-items: center;
@@ -34,4 +39,25 @@
 
 .Hero .feature p {
     margin-block: 1rem 3rem;
+}
+
+/********
+  TABLET
+ ********/
+@media (min-width: 680px) {
+    .Hero {
+        flex-direction: column;
+        padding: 6.25rem 0 ;
+        margin-inline: 2.5rem;
+    }
+
+    .Hero .features {
+        flex-direction: row;
+        gap: .625rem;
+    }
+
+    .Hero img,
+    .Hero .detail {
+        margin-inline: 6rem;
+    }
 }

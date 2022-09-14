@@ -26,26 +26,28 @@ export default function Hero() {
                 </p>
             </div>
 
-            <div className="feature flex-container">
-                <img src={iconPersonalFinances} alt="Personal Finances" />
-                <h5>Personal Finances</h5>
-                <p>
-                    Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account.
-                </p>
-            </div>
-            <div className="feature flex-container">
-                <img src={iconBankingCoverage} alt="Banking & Coverage" />
-                <h5>Banking & Coverage</h5>
-                <p>
-                    With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit card, and brokerage accounts.
-                </p>
-            </div>
-            <div className="feature flex-container">
-                <img src={iconConsumerPayments} alt="Consumer Payments" />
-                <h5>Consumer Payments</h5>
-                <p>
-                    It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account.
-                </p>
+            <div className="features flex-container">
+                <div className="feature flex-container">
+                    <img src={iconPersonalFinances} alt="Personal Finances" />
+                    <h5>Personal Finances</h5>
+                    <p>
+                        Consolidate financial data from multiple sources and categorize transactions up to 2 years of history. Analyze reports to reconcile activities in your account.
+                    </p>
+                </div>
+                <div className="feature flex-container">
+                    <img src={iconBankingCoverage} alt="Banking & Coverage" />
+                    <h5>Banking & Coverage</h5>
+                    <p>
+                        With our platform, you can speed up account onboarding and support ongoing payments for checking, savings, credit card, and brokerage accounts.
+                    </p>
+                </div>
+                <div className="feature flex-container">
+                    <img src={iconConsumerPayments} alt="Consumer Payments" />
+                    <h5>Consumer Payments</h5>
+                    <p>
+                        It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account.
+                    </p>
+                </div>
             </div>
         </div>
     )
