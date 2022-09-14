@@ -163,7 +163,7 @@ p {
 /*******************
   TABLET TYPOGRAPHY
  *******************/
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   h1 {
     font-size: 3rem;
     line-height: 3.5rem;

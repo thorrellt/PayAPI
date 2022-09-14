@@ -50,6 +50,9 @@
     font-weight: 700;
 }
 
+/********
+  TABLET
+ ********/
 @media (min-width: 680px) {
     .Landing .bgCircle-container {
         width: 123vw;
