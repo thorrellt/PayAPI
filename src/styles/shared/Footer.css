@@ -1,15 +1,13 @@
-
 .Footer .cta {
     margin-inline: 1.5rem;
     padding-block-end: 5rem;
-
 }
 
 .Footer .cta h2 {
     text-align: center;
 }
 
-.Footer .cta .cta-form{
+.Footer .cta .cta-form {
     margin-block-start: 2rem;
     text-align: center;
 }
@@ -22,10 +20,10 @@
     align-items: center;
     width: 100vw;
     background-color: var(--sec-blue-700);
-    
+
 }
 
-.Footer footer ul{
+.Footer footer ul {
     margin-block-start: 2.5rem;
     flex-direction: column;
     gap: 1.875rem;
@@ -33,39 +31,90 @@
     list-style-type: none;
 }
 
-.Footer footer ul li a{
-    color: var(--neutral-white)  
+.Footer footer ul li a {
+    color: var(--neutral-white)
 }
 
-.Footer footer ul li a{
+.Footer footer ul li a {
     text-decoration: none;
     color: var(--neutral-white)
-    
 }
 
-.Footer footer a img{
+.Footer footer a img {
     filter: invert(82%) sepia(26%) saturate(93%) hue-rotate(195deg) brightness(114%) contrast(99%);
 }
 
-.Footer footer .contacts{
+.Footer footer .contacts {
     margin-block-start: 2.5rem;
     gap: 1.5rem;
 }
 
 
-.Footer footer .contacts .contact{
+.Footer footer .contacts .contact {
     filter: invert(82%) sepia(26%) saturate(93%) hue-rotate(195deg) brightness(114%) contrast(99%);
 }
 
-.Footer .bgCircle-container{
+.Footer .bgCircle-container {
     position: absolute;
     width: 780px;
     left: 50%;
-    bottom:-600px;
+    bottom: -600px;
     transform: translate(-50%, 0);
 }
+
 .Footer .bgCircle {
     z-index: -10;
     width: 780px;
     height: 780px;
+}
+
+/********
+  TABLET
+ ********/
+@media (min-width: 680px) {
+    .Footer .cta {
+        margin-inline: 10rem;
+        padding-block-end: 6.25rem;
+    }
+    .Footer .cta .cta-form {
+        position: relative;
+        margin-block-start: 2.5rem;
+        text-align: center;
+    }
+
+    .Footer .cta .cta-form .prim-btn {
+        position: absolute;
+        right: 0;
+    }
+
+    .Footer footer {
+        padding-block: 2rem;
+        padding-inline: 2.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Footer footer ul {
+        margin-block-start: 0;
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+    
+    .Footer footer .contacts {
+        margin-block-start: 0;
+    }
+
+    .Footer .bgCircle-container {
+        width: 100vw;
+        left: 85%;
+        bottom: -650px;
+    }
+    
+    .Footer .bgCircle {
+        width: 100vw;
+        height: 100vw;
+    }
+    
+
 }

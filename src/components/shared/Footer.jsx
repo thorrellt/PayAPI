@@ -30,6 +30,9 @@ export default function Footer() {
                     <li>
                         <a href="#">Contact</a>
                     </li>
+                    <li>
+                        <a href="#">This Project</a>
+                    </li>
                 </ul>
                 <div className="contacts flex-container">
                     <a href="#" className="contact">
