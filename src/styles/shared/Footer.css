@@ -115,6 +115,35 @@
         width: 100vw;
         height: 100vw;
     }
-    
-
 }
+
+/********
+  DESKTOP
+ ********/
+ @media (min-width: 992px) {
+    .Footer .cta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .Footer .cta .cta-form{
+        flex: 0 0 28rem;
+        margin-block-start: 0;
+    }
+
+    .Footer footer {
+        padding-inline: 10rem ;
+    }
+
+    .Footer .bgCircle-container {
+        width: 780px;
+        left: 90vw;
+        bottom: -650px;
+    }
+    
+    .Footer .bgCircle {
+        width: 780px;
+        height: 780px;
+    }
+ }

@@ -62,7 +62,7 @@
     .Hero {
         flex-direction: column;
         padding: 6.25rem 0;
-        margin-inline: 2.5rem;
+        padding-inline: 2.5rem;
     }
 
     .Hero .features {
@@ -107,7 +107,7 @@
     .Hero .bgCircle-container {
         position: absolute;
         width: 780px;
-        left: 75vw;
+        left: 80vw;
         top: 50%;
         transform: translate(0 , -50%);
     }
