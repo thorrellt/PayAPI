@@ -1,6 +1,20 @@
 .Hero {
+    position: relative;
+    overflow: hidden;
     flex-direction: column;
+    align-items: center;
     padding: 5rem 1.5rem;
+}
+
+.Hero .detail-wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+
+.Hero .detail-wrapper img {
+    height: 100%;
+   
+    z-index: 1;
 }
 
 .Hero p {
@@ -18,7 +32,7 @@
 
 .Hero .detail p {
     margin-block: 2rem;
-    
+
 }
 
 .Hero .features {
@@ -47,7 +61,7 @@
 @media (min-width: 680px) {
     .Hero {
         flex-direction: column;
-        padding: 6.25rem 0 ;
+        padding: 6.25rem 0;
         margin-inline: 2.5rem;
     }
 
@@ -56,8 +70,52 @@
         gap: .625rem;
     }
 
-    .Hero img,
-    .Hero .detail {
+    .Hero .detail-wrapper {
         margin-inline: 6rem;
     }
+}
+
+/********
+  DESKTOP
+ ********/
+@media (min-width: 992px) {
+    .Hero .detail-wrapper {
+        margin-inline: 10.25rem;
+        flex-direction: row-reverse;
+        gap: 6rem;
+    }
+
+    .Hero .detail-wrapper:nth-child(2) {
+        flex-direction: row;
+        margin-block: 9.125rem;
+    }
+
+    .Hero .detail h2,
+    .Hero .detail p  {
+        text-align: start;
+    }
+
+    .Hero .detail {
+        margin-block: 0;
+    }
+
+    .Hero .features {
+        margin-inline: 10.25rem;
+        gap:1.875rem;
+    }
+
+    .Hero .bgCircle-container {
+        position: absolute;
+        width: 780px;
+        left: 75vw;
+        top: 50%;
+        transform: translate(0 , -50%);
+    }
+    
+    .Hero .bgCircle {
+        z-index: -10;
+        width: 780px;
+        height: 780px;
+    }
+
 }

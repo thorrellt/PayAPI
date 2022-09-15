@@ -5,25 +5,34 @@ import iconConsumerPayments from '../../assets/home/desktop/icon-consumer-paymen
 import iconPersonalFinances from '../../assets/home/desktop/icon-personal-finances.svg'
 import imgImplement from '../../assets/home/desktop/illustration-easy-to-implement.svg'
 import imgSimpleUI from '../../assets/home/desktop/illustration-simple-ui.svg'
+import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 
 
 export default function Hero() {
     return (
         <div className="Hero flex-container">
-            <img src={imgImplement} alt="Easy to Impliment" />
-            <div className="detail">
-                <h2>Easy to implement</h2>
-                <p>
-                    Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.
-                </p>
-            </div>
+            <div className="detail-wrapper flex-container">
 
-            <img src={imgSimpleUI} alt="Simple UI UX" />
-            <div className="detail">
-                <h2>Simple UI & UX</h2>
-                <p>
-                    Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.
-                </p>
+                <img src={imgImplement} alt="Easy to Impliment" />
+
+
+                <div className="detail">
+                    <h2>Easy to implement</h2>
+                    <p>
+                        Our API comes with just a few lines of code. You’ll be up and running in no time. We built our documentation page to integrate payments functionality with ease.
+                    </p>
+                </div>
+            </div>
+            <div className="detail-wrapper flex-container">
+                <div className="img-wrapper">
+                    <img src={imgSimpleUI} alt="Simple UI UX" />
+                </div>
+                <div className="detail">
+                    <h2>Simple UI & UX</h2>
+                    <p>
+                        Our pre-built form is easy to integrate in your app or website’s checkout flow and designed to optimize conversion.
+                    </p>
+                </div>
             </div>
 
             <div className="features flex-container">
@@ -48,6 +57,12 @@ export default function Hero() {
                         It’s easier to set up secure bank payments with us through a flow designed with the user experience in mind. Customers could instantly authenticate their account.
                     </p>
                 </div>
+            </div>
+            <div className="flex-container bgCircle-container">
+                <img
+                    src={bgCircle}
+                    className='bgCircle'
+                    alt="" />
             </div>
         </div>
     )
