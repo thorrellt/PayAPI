@@ -6,6 +6,7 @@ import facebook from '../../assets/shared/desktop/facebook.svg'
 import linkedin from '../../assets/shared/desktop/linkedin.svg'
 import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 import CTA from './CTA'
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -16,22 +17,22 @@ export default function Footer() {
             </div>
 
             <footer className='flex-container'>
-                <a href="#Home">
+            <NavLink to="/PayAPI">
                     <img src={logo} alt="PayAPI logo"
                         className='logo' />
-                </a>
-                <ul className="flex-container">
+                </NavLink>
+                <ul className='flex-container'>
                     <li>
-                        <a href="#">Pricing</a>
+                        <NavLink to="/PayAPI/pricing">Pricing</NavLink>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <NavLink to="/PayAPI/about">About</NavLink>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <NavLink to="/PayAPI/contact">Contact</NavLink>
                     </li>
                     <li>
-                        <a href="#">This Project</a>
+                        <NavLink to="/PayAPI/project">This Project</NavLink>
                     </li>
                 </ul>
                 <div className="contacts flex-container">

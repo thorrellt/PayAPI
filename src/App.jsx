@@ -7,7 +7,7 @@ import Contact from './pages/Contact'
 import Project from './pages/Project'
 import Navbar from './components/shared/Navbar'
 import Footer from './components/shared/Footer'
-import {Outlet} from "react-router-dom";
+import {Outlet, ScrollRestoration} from "react-router-dom";
 
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <Navbar windowWidth={windowWidth}/>
+      <ScrollRestoration />
       <Outlet />
       <Footer windowWidth={windowWidth}/>
     </div>
