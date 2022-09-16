@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import '../styles/Home.css'
-import Landing from './home/Landing'
-import Clients from './home/Clients'
-import Hero from './home/Hero'
+import Landing from '../components/home/Landing'
+import Clients from '../components/home/Clients'
+import Hero from '../components/home/Hero'
 
 
 export default function Home(props) {

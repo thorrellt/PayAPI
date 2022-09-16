@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react'
-import '../styles/App.css'
-import Home from './Home'
-import Navbar from './shared/Navbar'
-import Footer from './shared/Footer'
+import './styles/App.css'
+import Home from './pages/Home'
+import Pricing from './pages/Pricing'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Project from './pages/Project'
+import Navbar from './components/shared/Navbar'
+import Footer from './components/shared/Footer'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -24,8 +28,20 @@ function App() {
       element: <Home windowWidth={windowWidth}/>,
     },
     {
-      path: "/PayAPI",
-      element: <Home windowWidth={windowWidth}/>,
+      path: "/PayAPI/pricing",
+      element: <Pricing windowWidth={windowWidth}/>,
+    },
+    {
+      path: "/PayAPI/about",
+      element: <About windowWidth={windowWidth}/>,
+    },
+    {
+      path: "/PayAPI/contact",
+      element: <Contact windowWidth={windowWidth}/>,
+    },
+    {
+      path: "/PayAPI/project",
+      element: <Project windowWidth={windowWidth}/>,
     },
   ]);
 

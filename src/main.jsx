@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './components/App'
+import App from './App'
 import Navbar from './components/shared/Navbar'
 import './styles/index.css'
 
