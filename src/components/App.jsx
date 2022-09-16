@@ -3,13 +3,32 @@ import '../styles/App.css'
 import Home from './Home'
 import Navbar from './shared/Navbar'
 import Footer from './shared/Footer'
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+} from "react-router-dom";
 
 function App() {
-
-   /********
+  /********
     STATES
    ********/
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  /********
+    ROUTER
+   ********/
+  const router = createBrowserRouter([
+    {
+      path: "/PayAPI",
+      element: <Home windowWidth={windowWidth}/>,
+    },
+    {
+      path: "/PayAPI",
+      element: <Home windowWidth={windowWidth}/>,
+    },
+  ]);
+
   
 
   /***********************
@@ -35,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <Navbar windowWidth={windowWidth}/>
-      <Home windowWidth={windowWidth}/>
+      <RouterProvider router={router} />
       <Footer windowWidth={windowWidth}/>
     </div>
   )
