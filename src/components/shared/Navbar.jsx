@@ -8,6 +8,7 @@ import {
 import logo from '../../assets/shared/desktop/logo.svg'
 import menu from '../../assets/shared/mobile/menu.svg'
 import close from '../../assets/shared/mobile/close.svg'
+import { NavLink } from "react-router-dom";
 
 export default function Navbar(props) {
     const windowWidth = props.windowWidth
@@ -41,10 +42,10 @@ export default function Navbar(props) {
     return (
         <div className="Navbar flex-container" id='Navbar'>
             {windowWidth < breakWidth &&
-                <a href="#Home" className='logo-link'>
+                <NavLink to="/PayAPI"  className='logo-link'>
                     <img src={logo} alt="PayAPI logo"
                         className='logo' />
-                </a>
+                </NavLink>
             }
 
             <button onClick={toggleNav} className='menu-toggle-btn'>
@@ -61,25 +62,39 @@ export default function Navbar(props) {
                     </div>
                 }
                 {windowWidth >= breakWidth &&
-                    <a href="#Home" className='logo-link'>
+                    <NavLink to="/PayAPI" className='logo-link'>
                         <img src={logo} alt="PayAPI logo"
                             className='logo' />
-                    </a>
+                    </NavLink>
                 }
                 <ul>
                     <li>
-                        <a href="#">Pricing</a>
+                        <NavLink to="/PayAPI/pricing">Pricing</NavLink>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <NavLink to="/PayAPI/about">About</NavLink>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <NavLink to="/PayAPI/contact">Contact</NavLink>
                     </li>
                     <li>
-                        <a href="#">This Project</a>
+                        <NavLink to="/PayAPI/project">This Project</NavLink>
                     </li>
                 </ul>
+                {/* <ul>
+                    <li>
+                        <a to="/PayAPI/pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a to="/PayAPI/about">About</a>
+                    </li>
+                    <li>
+                        <a to="/PayAPI/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a to="/PayAPI/project">This Project</a>
+                    </li>
+                </ul> */}
                 <button className="prim-btn">Schedule a Demo</button>
             </div>
 

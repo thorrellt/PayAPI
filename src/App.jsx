@@ -7,11 +7,8 @@ import Contact from './pages/Contact'
 import Project from './pages/Project'
 import Navbar from './components/shared/Navbar'
 import Footer from './components/shared/Footer'
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+
 
 function App() {
   /********
@@ -19,31 +16,7 @@ function App() {
    ********/
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
-  /********
-    ROUTER
-   ********/
-  const router = createBrowserRouter([
-    {
-      path: "/PayAPI",
-      element: <Home windowWidth={windowWidth}/>,
-    },
-    {
-      path: "/PayAPI/pricing",
-      element: <Pricing windowWidth={windowWidth}/>,
-    },
-    {
-      path: "/PayAPI/about",
-      element: <About windowWidth={windowWidth}/>,
-    },
-    {
-      path: "/PayAPI/contact",
-      element: <Contact windowWidth={windowWidth}/>,
-    },
-    {
-      path: "/PayAPI/project",
-      element: <Project windowWidth={windowWidth}/>,
-    },
-  ]);
+
 
   
 
@@ -70,7 +43,7 @@ function App() {
   return (
     <div className="App">
       <Navbar windowWidth={windowWidth}/>
-      <RouterProvider router={router} />
+      <Outlet />
       <Footer windowWidth={windowWidth}/>
     </div>
   )
