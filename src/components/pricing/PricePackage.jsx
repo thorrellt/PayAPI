@@ -3,32 +3,42 @@ import check from '../../assets/shared/desktop/icon-check.svg'
 
 export default function PricePackage() {
     return (
-        <section className='package'>
-            <h4 className='name'>Package Page</h4>
-            <p className='description'></p>
-            <h1 className='price'></h1>
+        <section className='package flex-container'>
+            <h4 className='name'>Free Plan</h4>
+            <p className='description'>
+                Build and test using our core set of products with up to 100 API requests
+            </p>
+            <h1 className='price'>$0.00</h1>
             <div className="divider"></div>
-            <ul className='features'>
+            <ul className='features flex-container'>
                 <li>
-                    <img src={check} alt="" />
+                    <div className="check-wrapper">
+                        <img src={check} alt="" />
+                    </div>
                     <div className="title">
                         <p>Transaction</p>
                     </div>
                 </li>
                 <li>
-                    <img src={check} alt="" />
+                <div className="check-wrapper">
+                        <img src={check} alt="" />
+                    </div>
                     <div className="title">
                         <p>Auth</p>
                     </div>
                 </li>
-                <li>
-                    <img src={check} alt="" />
+                <li className='inactive'>
+                <div className="check-wrapper">
+                        <img src={check} alt="" />
+                    </div>
                     <div className="title">
                         <p>Investments</p>
                     </div>
                 </li>
-                <li>
-                    <img src={check} alt="" />
+                <li className='inactive'>
+                <div className="check-wrapper">
+                        <img src={check} alt="" />
+                    </div>
                     <div className="title">
                         <p>Assests</p>
                     </div>

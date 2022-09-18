@@ -5,25 +5,85 @@
     justify-content: center;
     align-items: flex-start;
 }
-.Pricing h1{
+
+.Pricing h1 {
     flex-basis: 100%;
     text-align: center;
 }
 
-.Pricing .packages{
+.Pricing .packages {
     padding-block-start: 3rem;
+    margin-inline: 1.5rem;
 }
+
+.Pricing .packages .package {
+    flex-direction: column;
+    align-items: center;
+}
+
+.Pricing .package .description {
+    margin-block-start: 1rem;
+    text-align: center;
+}
+
+.Pricing .packages .price {
+    font-size: 3.5rem;
+    margin-block-start: 1rem;
+}
+
+.Pricing .package .divider {
+    margin-block-start: 1.5rem;
+    border-bottom: 1px solid var(--sec-blue-500);
+    width: 100%;
+}
+
+.Pricing .package .features {
+    margin-block-start: 1.5rem;
+    list-style-type: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.Pricing .package .features li{
+    margin-inline: 6rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-basis: 100%;
+}
+
+.Pricing .package .features .check-wrapper {
+    width: .75rem;
+    flex-basis: .75rem;
+    height: .5rem;
+}
+
+.Pricing .package .features .title {
+    margin-inline-start: 1.5rem;
+}
+
+.Pricing .inactive .title p {
+   opacity: .5;
+}
+
+.Pricing .inactive .check-wrapper img {
+    display: none;
+}
+
+
+.Pricing .package button {
+    margin-block-start: 1.5rem;
+}
+
+
 
 /********
   TABLET
  ********/
-@media (min-width: 680px) {
-
-}
+@media (min-width: 680px) {}
 
 /********
   DESKTOP
  ********/
-@media (min-width: 992px) {
-
-}
+@media (min-width: 992px) {}
