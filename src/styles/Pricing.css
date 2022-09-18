@@ -1,4 +1,29 @@
 .Pricing {
-    height: 80vh;
-    padding-block-start: 10rem;
+    width: 100%;
+    padding-block-start: 7.875rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Pricing h1{
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.Pricing .packages{
+    padding-block-start: 3rem;
+}
+
+/********
+  TABLET
+ ********/
+@media (min-width: 680px) {
+
+}
+
+/********
+  DESKTOP
+ ********/
+@media (min-width: 992px) {
+
 }

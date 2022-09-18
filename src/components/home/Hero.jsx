@@ -8,7 +8,7 @@ import imgSimpleUI from '../../assets/home/desktop/illustration-simple-ui.svg'
 import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 
 
-export default function Hero() {
+export default function Hero(props) {
     return (
         <div className="Hero flex-container">
             <div className="detail-wrapper flex-container">
