@@ -1,6 +1,6 @@
 import '../styles/Pricing.css'
 import PricePackage from '../components/pricing/PricePackage'
-import pricingData from '../components/pricing/pricingDate'
+import pricingData from '../components/pricing/pricingData.js'
 
 
 export default function Pricing(props) {
