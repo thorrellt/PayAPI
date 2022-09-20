@@ -8,7 +8,10 @@ import {
 import logo from '../../assets/shared/desktop/logo.svg'
 import menu from '../../assets/shared/mobile/menu.svg'
 import close from '../../assets/shared/mobile/close.svg'
-import { NavLink } from "react-router-dom";
+import {
+    NavLink,
+    useLocation
+} from "react-router-dom";
 import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 
 export default function Navbar(props) {
@@ -28,7 +31,13 @@ export default function Navbar(props) {
         setNavActive(prevNavState => !prevNavState)
     }
 
-    //NAV BAR SCROLL CONTROLS
+    //minimize menu on page change
+    let location = useLocation();
+    useEffect(() => {
+        setNavActive(false)
+    }, [location]);
+
+    //hide nav on scroll down
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
         let currentScrollPos = window.pageYOffset;
@@ -43,7 +52,7 @@ export default function Navbar(props) {
     return (
         <div className="Navbar flex-container" id='Navbar'>
             {windowWidth < breakWidth &&
-                <NavLink to="/PayAPI"  className='logo-link'>
+                <NavLink to="/PayAPI" className='logo-link'>
                     <img src={logo} alt="PayAPI logo"
                         className='logo' />
                 </NavLink>

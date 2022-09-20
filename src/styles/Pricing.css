@@ -16,13 +16,20 @@
 }
 
 .Pricing .packages {
+    flex-direction: column;
     padding-block-start: 3rem;
     margin-inline: 1.5rem;
 }
 
 .Pricing .packages .package {
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+}
+
+.Pricing .packages .package h4 {
+    flex-basis: 100%;
+    text-align: center;
 }
 
 .Pricing .package .description {
@@ -48,15 +55,18 @@
     list-style-type: none;
     flex-wrap: wrap;
     align-items: center;
+    width: min-content;
     justify-content: center;
 }
 
 .Pricing .package .features li{
-    margin-inline: 6rem;
     display: flex;
     justify-content: left;
     align-items: center;
     flex-basis: 100%;
+}
+.Pricing .package .features li p{
+    font-size: 1rem;
 }
 
 .Pricing .package .features .check-wrapper {
@@ -88,7 +98,24 @@
 /********
   TABLET
  ********/
-@media (min-width: 680px) {}
+@media (min-width: 680px) {
+    .Pricing .packages {
+        flex-direction: row;
+        margin-inline: 2.5rem;
+        gap: 1.25rem;
+    }
+    .Pricing .packages .package {
+        flex: 1 1 33%;
+    }
+    .Pricing .packages .price {
+        font-size: 3rem;
+    }
+    .Pricing .packages .package .price,
+    .Pricing .packages .package .divider {
+        flex-shrink: 1;
+        flex-grow: 1;
+    }
+}
 
 /********
   DESKTOP

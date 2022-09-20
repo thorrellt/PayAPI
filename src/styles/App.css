@@ -1,13 +1,14 @@
 .App {
     position: relative;
+    overflow: hidden;
 }
+
 .App > .bgCircle-container {
     position: absolute;
     width: 780px;
     height: 780px;
     left: 50px;
-    top: -275px;
-    transform: translate(0 , -50%);
+    top: -650px;
     display: inline;
 }
 
@@ -16,3 +17,18 @@
     width: 780px;
     height: 780px;
 }
+
+/********
+  TABLET
+ ********/
+@media (min-width: 680px) {
+    .App > .bgCircle-container {
+        left: 500px;
+        top: -460px;
+    }
+}
+
+/********
+   DESKTOP
+  ********/
+@media (min-width: 992px) {}
