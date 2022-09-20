@@ -1,0 +1,18 @@
+.App {
+    position: relative;
+}
+.App > .bgCircle-container {
+    position: absolute;
+    width: 780px;
+    height: 780px;
+    left: 50px;
+    top: -275px;
+    transform: translate(0 , -50%);
+    display: inline;
+}
+
+.App .bgCircle {
+    z-index: -10;
+    width: 780px;
+    height: 780px;
+}

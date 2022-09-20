@@ -7,7 +7,8 @@ import Contact from './pages/Contact'
 import Project from './pages/Project'
 import Navbar from './components/shared/Navbar'
 import Footer from './components/shared/Footer'
-import {Outlet, ScrollRestoration} from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
+import bgCircle from './assets/shared/desktop/bg-pattern-circle.svg'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
 
 
 
-  
+
 
   /***********************
     FUNCTIONS & LISTENERS
@@ -42,10 +43,17 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar windowWidth={windowWidth}/>
+      <Navbar windowWidth={windowWidth} />
       <ScrollRestoration />
       <Outlet />
-      <Footer windowWidth={windowWidth}/>
+      <Footer windowWidth={windowWidth} />
+
+      <div className="flex-container bgCircle-container">
+        <img
+          src={bgCircle}
+          className='bgCircle'
+          alt="" />
+      </div>
     </div>
   )
 }

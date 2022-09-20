@@ -9,6 +9,7 @@ import logo from '../../assets/shared/desktop/logo.svg'
 import menu from '../../assets/shared/mobile/menu.svg'
 import close from '../../assets/shared/mobile/close.svg'
 import { NavLink } from "react-router-dom";
+import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 
 export default function Navbar(props) {
     const windowWidth = props.windowWidth
@@ -81,27 +82,8 @@ export default function Navbar(props) {
                         <NavLink to="/PayAPI/project">This Project</NavLink>
                     </li>
                 </ul>
-                {/* <ul>
-                    <li>
-                        <a to="/PayAPI/pricing">Pricing</a>
-                    </li>
-                    <li>
-                        <a to="/PayAPI/about">About</a>
-                    </li>
-                    <li>
-                        <a to="/PayAPI/contact">Contact</a>
-                    </li>
-                    <li>
-                        <a to="/PayAPI/project">This Project</a>
-                    </li>
-                </ul> */}
                 <button className="prim-btn">Schedule a Demo</button>
             </div>
-
-
-
-            {/* <img src={menu} alt="open menu"
-                className='menu-toggle-btn' /> */}
         </div>
     )
 }
