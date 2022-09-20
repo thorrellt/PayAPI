@@ -7,7 +7,10 @@ import Contact from './pages/Contact'
 import Project from './pages/Project'
 import Navbar from './components/shared/Navbar'
 import Footer from './components/shared/Footer'
-import { Outlet, ScrollRestoration } from "react-router-dom";
+import { 
+  Outlet, 
+  ScrollRestoration,
+useLocation } from "react-router-dom";
 import bgCircle from './assets/shared/desktop/bg-pattern-circle.svg'
 
 
@@ -36,6 +39,8 @@ function App() {
       window.removeEventListener("resize", watchWidth)
     }
   }, [])
+
+
 
   const onCheckClick = () => {
     setIsChecked(prevIsChecked => !prevIsChecked)
