@@ -110,14 +110,24 @@
     .Pricing .packages .price {
         font-size: 3rem;
     }
-    .Pricing .packages .package .price,
-    .Pricing .packages .package .divider {
-        flex-shrink: 1;
-        flex-grow: 1;
-    }
 }
 
 /********
   DESKTOP
  ********/
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .Pricing h1,
+    .Pricing .packages .package h4,
+    .Pricing .package .description {
+        text-align: left;
+    }
+    .Pricing .packages {
+        margin-inline: 10.25rem;
+        gap: 1.875rem;
+    }  
+
+    .Pricing .packages .package {
+        justify-content: flex-start;
+    }
+    
+}

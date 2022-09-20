@@ -31,4 +31,10 @@
 /********
    DESKTOP
   ********/
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .App > .bgCircle-container {
+        left: 60vw;
+        top: -560px;
+    }
+
+}
