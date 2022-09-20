@@ -1,7 +1,7 @@
 import '../../styles/Pricing.css'
 import check from '../../assets/shared/desktop/icon-check.svg'
 
-export default function PricePackage() {
+export default function PricePackage(props) {
     return (
         <section className='package flex-container'>
             <h4 className='name'>Free Plan</h4>
@@ -27,6 +27,14 @@ export default function PricePackage() {
                         <p>Auth</p>
                     </div>
                 </li>
+                <li>
+                <div className="check-wrapper">
+                        <img src={check} alt="" />
+                    </div>
+                    <div className="title">
+                        <p>Identity</p>
+                    </div>
+                </li>
                 <li className='inactive'>
                 <div className="check-wrapper">
                         <img src={check} alt="" />
@@ -41,6 +49,22 @@ export default function PricePackage() {
                     </div>
                     <div className="title">
                         <p>Assests</p>
+                    </div>
+                </li>
+                <li>
+                <div className="check-wrapper">
+                        <img src={check} alt="" />
+                    </div>
+                    <div className="title">
+                        <p>Liabilities</p>
+                    </div>
+                </li>
+                <li>
+                <div className="check-wrapper">
+                        <img src={check} alt="" />
+                    </div>
+                    <div className="title">
+                        <p>Income</p>
                     </div>
                 </li>
             </ul>
