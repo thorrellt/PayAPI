@@ -2,16 +2,19 @@ import '../../styles/Pricing.css'
 import check from '../../assets/shared/desktop/icon-check.svg'
 
 export default function PricePackage(props) {
+    const {name, description, price, features} = props
+
     return (
         <section className='package flex-container'>
-            <h4 className='name'>Free Plan</h4>
+            <h4 className='name'>{name}</h4>
             <p className='description'>
-                Build and test using our core set of products with up to 100 API requests
+                {description}
             </p>
-            <h1 className='price'>$0.00</h1>
+            <h1 className='price'>{`$${price}`}</h1>
             <div className="divider"></div>
             <ul className='features flex-container'>
-                <li>
+                <li 
+                className={features.transaction ? '' : 'inactive'}>
                     <div className="check-wrapper">
                         <img src={check} alt="" />
                     </div>
@@ -19,7 +22,8 @@ export default function PricePackage(props) {
                         <p>Transaction</p>
                     </div>
                 </li>
-                <li>
+                <li 
+                className={features.auth ? '' : 'inactive'}>
                 <div className="check-wrapper">
                         <img src={check} alt="" />
                     </div>
@@ -27,7 +31,8 @@ export default function PricePackage(props) {
                         <p>Auth</p>
                     </div>
                 </li>
-                <li>
+                <li 
+                className={features.identity ? '' : 'inactive'}>
                 <div className="check-wrapper">
                         <img src={check} alt="" />
                     </div>
@@ -35,7 +40,8 @@ export default function PricePackage(props) {
                         <p>Identity</p>
                     </div>
                 </li>
-                <li className='inactive'>
+                <li 
+                className={features.investments ? '' : 'inactive'}>
                 <div className="check-wrapper">
                         <img src={check} alt="" />
                     </div>
@@ -43,15 +49,17 @@ export default function PricePackage(props) {
                         <p>Investments</p>
                     </div>
                 </li>
-                <li className='inactive'>
+                <li 
+                className={features.assets ? '' : 'inactive'}>
                 <div className="check-wrapper">
                         <img src={check} alt="" />
                     </div>
                     <div className="title">
-                        <p>Assests</p>
+                        <p>Assets</p>
                     </div>
                 </li>
-                <li>
+                <li 
+                className={features.liabilities ? '' : 'inactive'}>
                 <div className="check-wrapper">
                         <img src={check} alt="" />
                     </div>
@@ -59,7 +67,8 @@ export default function PricePackage(props) {
                         <p>Liabilities</p>
                     </div>
                 </li>
-                <li>
+                <li 
+                className={features.income ? '' : 'inactive'}>
                 <div className="check-wrapper">
                         <img src={check} alt="" />
                     </div>
