@@ -11,7 +11,9 @@ export default function PricePackage(props) {
                 {description}
             </p>
             <h1 className='price'>{`$${price}`}</h1>
+            
             <div className="divider"></div>
+
             <ul className='features flex-container'>
                 <li 
                 className={features.transaction ? '' : 'inactive'}>
