@@ -113,6 +113,7 @@
 
     .About .desktop-team-img {
         display: inline;
+        width: 100%;
     }
     .About .img-container {
         margin-block-start: 5.75rem;
@@ -163,13 +164,14 @@
 
     .About .img-container {
         position: relative;
+        width: 100%;
         /* overflow: hidden; */
     }
 
     .About .circle-container {
         position: absolute;
         display: inline;
-        left: -40vw;
+        left: -400px;
         top: 50%;
         transform: translate(0, -50%);
     }
