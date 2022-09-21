@@ -1,6 +1,7 @@
 import '../styles/About.css'
 import mobileTeam from '../assets/about/mobile/image-team-members.jpg'
 import desktopTeam from '../assets/about/desktop/image-team-members.jpg'
+import Circle from '../components/shared/Circle'
 
 
 export default function About(props) {
@@ -19,7 +20,11 @@ export default function About(props) {
             </section>
 
             <img className='mobile-team-img' src={mobileTeam} alt="team picture" />
-            <img className='desktop-team-img' src={desktopTeam} alt="team picture" />
+            <div className="img-container">
+                <img className='desktop-team-img' src={desktopTeam} alt="team picture" />
+                <Circle />
+            </div>
+
 
             <div className="statistics flex-container">
                 <div className="stat flex-container">

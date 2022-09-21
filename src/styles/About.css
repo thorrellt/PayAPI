@@ -65,6 +65,10 @@
     color: var(--sec-blue-500);
 }
 
+.About .circle-container {
+    display: none;
+}
+
 /********
   TABLET
  ********/
@@ -109,6 +113,8 @@
 
     .About .desktop-team-img {
         display: inline;
+    }
+    .About .img-container {
         margin-block-start: 5.75rem;
     }
 
@@ -127,6 +133,44 @@
 }
 
 /********
-   DESKTOP
-  ********/
-@media (min-width: 992px) {}
+ DESKTOP
+ ********/
+@media (min-width: 992px) {
+
+    .About {
+        padding-block-start: 10.625rem;
+        margin-block-end: 6.25rem;
+    }
+
+    .About h2 {
+        font-size: 3.5rem;
+        text-align: left;
+        margin-inline-start: 16.25rem;
+        margin-inline-end: 28rem;
+    }
+
+    .About section {
+        margin-block-start: 3.5rem;
+        margin-inline: 16.25rem;
+    }
+
+    .About .statistics {
+        margin-block-start: 4.5rem;
+        margin-block-end: 1rem;
+        margin-inline: 10.25rem;
+        gap: .75rem;
+    }
+
+    .About .img-container {
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .About .circle-container {
+        position: absolute;
+        display: inline;
+        left: -40vw;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
