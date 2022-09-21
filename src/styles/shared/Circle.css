@@ -1,0 +1,12 @@
+.circle-container {
+    position: absolute;
+    width: 780px;
+    height: 780px;
+    display: inline;
+}
+
+.circle {
+    z-index: -30;
+    width: 780px;
+    height: 780px;
+}
