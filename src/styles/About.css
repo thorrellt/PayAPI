@@ -1,15 +1,15 @@
-.App > .bgCircle-container {
+.App>.bgCircle-container {
     display: inline;
 }
 
 .About {
     padding-block-start: 7.875rem;
     margin-block-end: 3rem;
-    
 }
-.About h2{
+
+.About h2 {
     font-size: 2rem;
-    padding-inline: 1.5rem;
+    margin-inline: 1.5rem;
 }
 
 .About h2,
@@ -19,11 +19,16 @@
     text-align: center;
 }
 
-.About section{
+.About section {
+    display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-block-start: 3rem;
-    padding-inline: 1.5rem;
+    margin-block-start: 3rem;
+    margin-inline: 1.5rem;
+}
+
+.About section p {
+    color: var(--sec-blue-300);
 }
 
 .About .mobile-team-img {
@@ -34,7 +39,7 @@
     display: none;
 }
 
-.About .statistics{
+.About .statistics {
     margin-block-start: 3rem;
     margin-inline: 1.5rem;
     padding-block: 1.25rem;
@@ -44,26 +49,84 @@
     border-bottom: 1px solid var(--sec-blue-500);
 }
 
-.About .statistics .stat{
+.About .statistics .stat {
     flex-direction: column;
     gap: .75rem;
 }
 
-.About .statistics .stat h1{
+.About .statistics .stat h1 {
     font-size: 3.5rem;
     color: var(--prim-pink-500);
+}
+
+.About .statistics .stat p {
+    font-size: 1rem;
+    opacity: 0.7;
+    color: var(--sec-blue-500);
 }
 
 /********
   TABLET
  ********/
- @media (min-width: 680px) {
+@media (min-width: 680px) {
+
+    .About {
+        padding-block-start: 10.25rem;
+        margin-block-end: 4.5rem;
+    }
+
+    .About h2 {
+        font-size: 3rem;
+        margin-inline: 5.5rem;
+    }
+
+
+    .About p,
+    .About section h3,
+    .About h1 {
+        text-align: left;
+    }
+
+    .About section {
+        flex-direction: row;
+        gap: 0rem;
+        margin-block-start: 4rem;
+        margin-inline: 2.5rem;
+    }
+
+    .About section h3 {
+        flex: 1 1 30%;
+        /* font-size: 2.5rem; */
+    }
+
+    .About section p {
+        flex: 1 1 70%;
+    }
+
+    .About .mobile-team-img {
+        display: none;
+    }
+
+    .About .desktop-team-img {
+        display: inline;
+        margin-block-start: 5.75rem;
+    }
+
+    .About .statistics {
+        margin-block-start: 4rem;
+        margin-inline: 2.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: .75rem;
+    }
+
+    .About .statistics .stat {
+        flex: 1 1 33%
+    }
 
 }
 
 /********
    DESKTOP
   ********/
-@media (min-width: 992px) {
-
-}
+@media (min-width: 992px) {}
