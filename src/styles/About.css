@@ -3,6 +3,67 @@
 }
 
 .About {
-    height: 80vh;
-    padding-block-start: 10rem;
+    padding-block-start: 7.875rem;
+    margin-block-end: 3rem;
+    
+}
+.About h2{
+    font-size: 2rem;
+    padding-inline: 1.5rem;
+}
+
+.About h2,
+.About p,
+.About section h3,
+.About h1 {
+    text-align: center;
+}
+
+.About section{
+    flex-direction: column;
+    gap: 1rem;
+    padding-block-start: 3rem;
+    padding-inline: 1.5rem;
+}
+
+.About .mobile-team-img {
+    margin-block-start: 4.75rem;
+}
+
+.About .desktop-team-img {
+    display: none;
+}
+
+.About .statistics{
+    margin-block-start: 3rem;
+    margin-inline: 1.5rem;
+    padding-block: 1.25rem;
+    flex-direction: column;
+    gap: 2.5rem;
+    border-top: 1px solid var(--sec-blue-500);
+    border-bottom: 1px solid var(--sec-blue-500);
+}
+
+.About .statistics .stat{
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.About .statistics .stat h1{
+    font-size: 3.5rem;
+    color: var(--prim-pink-500);
+}
+
+/********
+  TABLET
+ ********/
+ @media (min-width: 680px) {
+
+}
+
+/********
+   DESKTOP
+  ********/
+@media (min-width: 992px) {
+
 }

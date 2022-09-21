@@ -18,18 +18,19 @@ export default function About(props) {
                 <p>At the core of our platform is the technical infrastructure APIs that connect consumers. Our innovative product provides key insights for businesses and individuals, as well as robust reporting for traditional financial institutions and developers. </p>
             </section>
 
-            <img src={mobileTeam} alt="team picture" />
+            <img className='mobile-team-img' src={mobileTeam} alt="team picture" />
+            <img className='desktop-team-img' src={desktopTeam} alt="team picture" />
 
-            <div className="statistics">
-            <div className="stat">
+            <div className="statistics flex-container">
+                <div className="stat flex-container">
                     <p>Team Members</p>
                     <h1>300+</h1>
                 </div>
-                <div className="stat">
+                <div className="stat flex-container">
                     <p>Offices in the Us</p>
                     <h1>3</h1>
                 </div>
-                <div className="stat">
+                <div className="stat flex-container">
                     <p>Transactions analyzed</p>
                     <h1>10M+</h1>
                 </div>
