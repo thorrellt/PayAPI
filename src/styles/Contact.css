@@ -37,6 +37,7 @@
 .Contact .clients {
     margin-block-start: 5rem;
 }
+
 .Contact .client-logos {
     margin-block-start: 2rem;
     display: grid;
@@ -57,6 +58,34 @@
   TABLET
  ********/
  @media (min-width: 680px) {
+
+    .Contact {
+        margin-block-start: 10.25rem;
+        margin-block-end: 6.25rem;
+        margin-inline: 0;
+    }
+
+    .Contact h2 {
+        margin-inline: 6.125rem;
+    }
+
+    .Contact form{
+        margin-block-start: 3.375rem;
+        margin-inline: 10.125rem;
+    }
+
+    .Contact .clients {
+        margin-block-start: 4rem;
+        margin-inline: 7.125rem;
+    }
+
+    .Contact .clients h3{
+        margin-inline: 3rem;
+    }
+
+    .Contact .client-logos {
+        margin-block-start: 2.5rem;
+    }
 
     .Contact .client-logos {
         grid-template-columns: 1fr 1fr 1fr;
