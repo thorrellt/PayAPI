@@ -29,9 +29,9 @@ export default function Contact(props) {
 
     return (
         <main className='Contact'>
-            <h1>Submit a help request and we’ll get in touch shortly.</h1>
+            <h2>Submit a help request and we’ll get in touch shortly.</h2>
 
-            <form>
+            <form className='flex-container'>
                 <div className="input-container flex-container">
                     <input type="text" id='name' name='name' />
                     <label htmlFor="name">Name</label>
@@ -55,11 +55,11 @@ export default function Contact(props) {
 
                 <div className="input-container flex-container">
                     <textarea id='message' name='message' />
-                    <label htmlFor="message" rows="4" cols="50">Message</label>
+                    <label htmlFor="message">Message</label>
                 </div>
 
                 <div className="checkbox-container flex-container">
-                    <label className="checkbox-wrapper">
+                    <label className="checkbox-wrapper flex-container">
                         <input
                             type="checkbox"
                             defaultChecked={formState.updates}
@@ -71,14 +71,16 @@ export default function Contact(props) {
                     </label>
                 </div>
 
-                <button className='sec-btn-light'>Submit</button>
+                <button className='sec-btn-light submit-btn'>
+                    Submit
+                </button>
 
             </form>
 
             <section className="clients">
-                <h4>
+                <h3>
                     Join the thousands of innovators already building with us
-                </h4>
+                </h3>
 
                 <div className="client-logos">
                     <img src={tesla} alt="tesla" className="logo" />
