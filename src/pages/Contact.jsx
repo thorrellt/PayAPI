@@ -20,11 +20,25 @@ export default function Contact(props) {
         updates: false
     })
 
+    const onFormChange = (event) => {
+        const name = event.target.id
+        const value = event.target.value
+        const type = event.target.type
+
+        if (type != "checkbox")
+        setFormState(prevFormState => ({
+            ...prevFormState,
+            [name]:value 
+        }))
+        console.log(name + ': ' + value)
+    }
+
     const onCheckClick = () => {
         setFormState(prevIsChecked => ({
             ...formState,
             updates: !formState.updates
         }))
+        console.log(formState.updates)
     }
 
     return (
@@ -35,28 +49,51 @@ export default function Contact(props) {
 
             <form className='flex-container'>
                 <div className="input-container flex-container">
-                    <input type="text" id='name' name='name' />
+                    <input 
+                    onChange={onFormChange} 
+                    type="text" 
+                    id='name' 
+                    name='name'
+                    value={formState.name} />
                     <label htmlFor="name">Name</label>
 
                 </div>
 
                 <div className="input-container flex-container">
-                    <input type="email" id='email' name='email' />
+                    <input 
+                    onChange={onFormChange} 
+                    type="email" 
+                    id='email' name='email'
+                    value={formState.email}  />
                     <label htmlFor="email">Email</label>
                 </div>
 
                 <div className="input-container flex-container">
-                    <input type="text" id='company' name='company' />
+                    <input 
+                    onChange={onFormChange} 
+                    type="text" 
+                    id='company' 
+                    name='company'
+                    value={formState.company}  />
                     <label htmlFor="company">Company Name</label>
                 </div>
 
                 <div className="input-container flex-container">
-                    <input type="text" id='title' name='title' />
+                    <input 
+                    onChange={onFormChange} 
+                    type="text" 
+                    id='title' 
+                    name='title'
+                    value={formState.title}  />
                     <label htmlFor="title">Title</label>
                 </div>
 
                 <div className="input-container flex-container">
-                    <textarea id='message' name='message' />
+                    <textarea 
+                    onChange={onFormChange} 
+                    id='message' 
+                    name='message' 
+                    value={formState.message} />
                     <label htmlFor="message">Message</label>
                 </div>
 
@@ -64,8 +101,9 @@ export default function Contact(props) {
                     <label className="checkbox-wrapper flex-container">
                         <input
                             type="checkbox"
-                            defaultChecked={formState.updates}
-                            onClick={onCheckClick} />
+                            checked={formState.updates}
+                            onClick={onCheckClick}
+                            onChange={onFormChange}  />
                         <span className="checkmark" />
                         <p>
                             Stay up-to-date with company announcements and updates to our API
