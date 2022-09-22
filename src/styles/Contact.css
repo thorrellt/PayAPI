@@ -2,6 +2,45 @@
     display: inline;
 }
 .Contact {
-    height: 80vh;
     padding-block-start: 10rem;
 }
+
+.Contact form .input-container {
+    flex-direction: column-reverse;
+}
+
+.Contact .client-logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3.5rem;
+    row-gap: 2.5rem;
+    padding-inline: 3.5rem;
+    color: var(--neutral-white);
+    align-items: center;
+    justify-items: center;
+}
+
+.Contact .client-logos .logo {
+    filter: invert(82%) sepia(26%) saturate(93%) hue-rotate(195deg) brightness(114%) contrast(99%);
+}
+
+/********
+  TABLET
+ ********/
+ @media (min-width: 680px) {
+
+    .Contact .client-logos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+ }
+
+/********
+ DESKTOP
+ ********/
+ @media (min-width: 992px) {
+    .Contact .client-logos {
+        padding: 0;
+        flex: 0 1 50%;
+    }
+ }
