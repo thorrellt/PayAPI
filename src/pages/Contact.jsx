@@ -28,8 +28,10 @@ export default function Contact(props) {
     }
 
     return (
-        <main className='Contact'>
-            <h2>Submit a help request and we’ll get in touch shortly.</h2>
+        <main className='Contact flex-container'>
+            <div className="title-wrapper">
+                <h2>Submit a help request and we’ll get in touch shortly.</h2>
+            </div>
 
             <form className='flex-container'>
                 <div className="input-container flex-container">

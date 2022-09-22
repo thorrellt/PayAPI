@@ -2,6 +2,7 @@
     display: inline;
 }
 .Contact {
+    flex-direction: column;
     margin-block-start: 7.875rem;
     margin-block-end: 5rem;
     margin-inline: 1.5rem;
@@ -36,6 +37,10 @@
 
 .Contact .clients {
     margin-block-start: 5rem;
+}
+
+.Contact .clients h3 {
+    opacity: 0.75;
 }
 
 .Contact .client-logos {
@@ -97,6 +102,53 @@
  DESKTOP
  ********/
  @media (min-width: 992px) {
+    .Contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-block-start: 10.625rem;
+        margin-block-end: 5.75rem;
+        margin-inline: 10.25rem;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5rem;
+    }
+
+    .Contact .title-wrapper{
+        display: flex;
+        flex-basis: 100%;
+        margin-block-end: 2.75rem;
+        outline: 1px solid black;
+    }
+
+    .Contact h2 {
+        max-width: 45.625rem;
+        margin-inline: 0;
+    }
+
+    .Contact form {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 5rem;
+        max-width: 27.75rem;
+        margin-block-start: 0;
+        margin-inline: 0;
+    }
+
+    .Contact .clients {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 5rem;
+        max-width: 33.75rem;
+        margin-block-start: 0;
+        margin-inline: 0;
+    }
+
+    .Contact .clients h3{
+        margin-inline: 0;
+        font-size: 1.5rem;
+    }
+
+
     .Contact .client-logos {
         padding: 0;
         flex: 0 1 50%;
