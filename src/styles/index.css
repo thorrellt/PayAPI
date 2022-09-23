@@ -35,6 +35,8 @@
   color: var(--sec-blue-500);
   font-weight: 400;
 
+  scroll-behavior: smooth;
+
 }
 
 /********
