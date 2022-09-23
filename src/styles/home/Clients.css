@@ -8,7 +8,7 @@
     padding-block: 5rem;
 }
 
-.Clients .bgCircle-container {
+.Clients .circle-container {
     position: absolute;
 
     width: 780px;
@@ -17,7 +17,7 @@
     transform: translate(-50%, 0);
 }
 
-.Clients .bgCircle {
+.Clients .circle {
     z-index: -10;
     width: 780px;
     height: 780px;
@@ -63,13 +63,13 @@
 
 @media (min-width: 680px) {
 
-    .Clients .bgCircle-container {
+    .Clients .circle-container {
         width: 100vw;
         left: 50%;
         top: -500px;
     }
 
-    .Clients .bgCircle {
+    .Clients .circle {
         width: 100vw;
         height: 100vw;
     }
@@ -120,14 +120,14 @@
         flex: 0 1 50%;
     }
 
-    .Clients .bgCircle-container {
+    .Clients .circle-container {
         width: 780px;
         left: -235px;
         top: -359px;
         transform: translate(0, 0);
     }
 
-    .Clients .bgCircle {
+    .Clients .circle {
         width: 780px;
         height: 780px;
     }

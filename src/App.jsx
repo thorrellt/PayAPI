@@ -7,21 +7,23 @@ import Contact from './pages/Contact'
 import Project from './pages/Project'
 import Navbar from './components/shared/Navbar'
 import Footer from './components/shared/Footer'
-import { 
-  Outlet, 
+import Circle from './components/shared/Circle'
+import {
+  Outlet,
   ScrollRestoration,
-useLocation } from "react-router-dom";
+  useLocation
+} from "react-router-dom";
 import bgCircle from './assets/shared/desktop/bg-pattern-circle.svg'
 
 
 function App() {
-  /********
-    STATES
-   ********/
+  /****************
+    STATES & HOOKS
+   ****************/
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
 
-
+  let location = useLocation();
 
 
   /***********************
@@ -40,7 +42,7 @@ function App() {
     }
   }, [])
 
-
+  
 
   const onCheckClick = () => {
     setIsChecked(prevIsChecked => !prevIsChecked)
@@ -53,12 +55,7 @@ function App() {
       <Outlet />
       <Footer windowWidth={windowWidth} />
 
-      <div className="flex-container bgCircle-container">
-        <img
-          src={bgCircle}
-          className='bgCircle'
-          alt="" />
-      </div>
+      {location.pathname !== '/PayAPI' &&  <Circle />}
     </div>
   )
 }

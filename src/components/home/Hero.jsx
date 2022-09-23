@@ -5,7 +5,7 @@ import iconConsumerPayments from '../../assets/home/desktop/icon-consumer-paymen
 import iconPersonalFinances from '../../assets/home/desktop/icon-personal-finances.svg'
 import imgImplement from '../../assets/home/desktop/illustration-easy-to-implement.svg'
 import imgSimpleUI from '../../assets/home/desktop/illustration-simple-ui.svg'
-import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
+import Circle from '../shared/Circle'
 
 
 export default function Hero(props) {
@@ -58,12 +58,7 @@ export default function Hero(props) {
                     </p>
                 </div>
             </div>
-            <div className="flex-container bgCircle-container">
-                <img
-                    src={bgCircle}
-                    className='bgCircle'
-                    alt="" />
-            </div>
+            <Circle />
         </div>
     )
 }

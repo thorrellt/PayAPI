@@ -3,7 +3,7 @@
     overflow: hidden;
 }
 
-.App > .bgCircle-container {
+.App > .circle-container {
     position: absolute;
     width: 780px;
     height: 780px;
@@ -12,7 +12,7 @@
     display: inline;
 }
 
-.App .bgCircle {
+.App .circle {
     z-index: -10;
     width: 780px;
     height: 780px;
@@ -22,7 +22,7 @@
   TABLET
  ********/
 @media (min-width: 680px) {
-    .App > .bgCircle-container {
+    .App > .circle-container {
         left: 500px;
         top: -460px;
     }
@@ -32,9 +32,9 @@
    DESKTOP
   ********/
 @media (min-width: 992px) {
-    .App > .bgCircle-container {
-        left: 60vw;
-        top: -560px;
+    .App > .circle-container {
+        left: 55vw;
+        top: -580px;
     }
 
 }

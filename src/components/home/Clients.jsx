@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import '../../styles/home/Clients.css'
 
+import Circle from '../shared/Circle'
+
 import tesla from '../../assets/shared/desktop/tesla.svg'
 import microsoft from '../../assets/shared/desktop/microsoft.svg'
 import hewlettPackard from '../../assets/shared/desktop/hewlett-packard.svg'
 import oracle from '../../assets/shared/desktop/oracle.svg'
 import google from '../../assets/shared/desktop/google.svg'
 import nvidia from '../../assets/shared/desktop/nvidia.svg'
-import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 
 
 export default function Clients() {
@@ -31,12 +32,7 @@ export default function Clients() {
                     About Us
                 </button>
             </div>
-            <div className="flex-container bgCircle-container">
-                <img
-                    src={bgCircle}
-                    className='bgCircle'
-                    alt="" />
-            </div>
+            <Circle />
         </div>
     )
 }

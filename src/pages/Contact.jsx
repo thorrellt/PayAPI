@@ -30,7 +30,6 @@ export default function Contact(props) {
             ...prevFormState,
             [name]:value 
         }))
-        console.log(name + ': ' + value)
     }
 
     const onCheckClick = () => {
@@ -38,7 +37,6 @@ export default function Contact(props) {
             ...formState,
             updates: !formState.updates
         }))
-        console.log(formState.updates)
     }
 
     return (
