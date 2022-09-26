@@ -6,6 +6,7 @@ import facebook from '../../assets/shared/desktop/facebook.svg'
 import linkedin from '../../assets/shared/desktop/linkedin.svg'
 import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 import CTA from './CTA'
+import Circle from './Circle'
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {
@@ -32,7 +33,7 @@ export default function Footer() {
                         <NavLink to="/PayAPI/contact">Contact</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/PayAPI/project">This Project</NavLink>
+                        <NavLink to="/PayAPI/project">Meet the Dev</NavLink>
                     </li>
                 </ul>
                 <div className="contacts flex-container">
@@ -49,12 +50,7 @@ export default function Footer() {
                             className='linkedin' />
                     </a>
                 </div>
-                <div className="flex-container bgCircle-container">
-                    <img
-                        src={bgCircle}
-                        className='bgCircle'
-                        alt="" />
-                </div>
+                <Circle />
             </footer>
 
         </div>

@@ -149,7 +149,7 @@
     .Navbar ul {
         margin-top: 0;
         flex-direction: row;
-        flex-basis: 22.5rem;
+        /* flex-basis: 22.5rem; */
         margin-inline: 1rem;
         flex-shrink: 0;
         width: auto;
@@ -164,6 +164,9 @@
         flex-shrink: 0;
         margin-block-start: 0;
         height: fit-content;
+    }
+    .Navbar .logo-link {
+        min-width: 100px;
     }
 
 }

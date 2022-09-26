@@ -88,7 +88,7 @@ export default function Navbar(props) {
                         <NavLink to="/PayAPI/contact">Contact</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/PayAPI/project">This Project</NavLink>
+                        <NavLink to="/PayAPI/project">Meet the Dev</NavLink>
                     </li>
                 </ul>
                 <button className="prim-btn">Schedule a Demo</button>

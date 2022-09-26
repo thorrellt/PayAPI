@@ -42,7 +42,7 @@ function App() {
     }
   }, [])
 
-  
+
 
   const onCheckClick = () => {
     setIsChecked(prevIsChecked => !prevIsChecked)
@@ -55,7 +55,8 @@ function App() {
       <Outlet />
       <Footer windowWidth={windowWidth} />
 
-      {location.pathname !== '/PayAPI' &&  <Circle />}
+      {location.pathname !== '/PayAPI' &&
+        location.pathname !== '/PayAPI/project' && <Circle />}
     </div>
   )
 }

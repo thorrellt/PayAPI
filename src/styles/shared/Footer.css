@@ -54,7 +54,7 @@
     filter: invert(82%) sepia(26%) saturate(93%) hue-rotate(195deg) brightness(114%) contrast(99%);
 }
 
-.Footer .bgCircle-container {
+.Footer .circle-container {
     position: absolute;
     width: 780px;
     left: 50%;
@@ -62,7 +62,7 @@
     transform: translate(-50%, 0);
 }
 
-.Footer .bgCircle {
+.Footer .circle {
     z-index: -10;
     width: 780px;
     height: 780px;
@@ -105,13 +105,13 @@
         margin-block-start: 0;
     }
 
-    .Footer .bgCircle-container {
+    .Footer .circle-container {
         width: 100vw;
         left: 85%;
         bottom: -650px;
     }
     
-    .Footer .bgCircle {
+    .Footer .circle {
         width: 100vw;
         height: 100vw;
     }
@@ -136,13 +136,13 @@
         padding-inline: 10rem ;
     }
 
-    .Footer .bgCircle-container {
+    .Footer .circle-container {
         width: 780px;
         left: 90vw;
         bottom: -650px;
     }
     
-    .Footer .bgCircle {
+    .Footer .circle {
         width: 780px;
         height: 780px;
     }

@@ -112,11 +112,20 @@
   DESKTOP
  ********/
 @media (min-width: 992px) {
-    .Pricing h1,
+    .Pricing {
+        padding-block-start: 10.625rem;
+    }
+
+    .Pricing h2,
     .Pricing .packages .package h4,
     .Pricing .package .description {
         text-align: left;
     }
+    .Pricing h2{
+        margin-right: auto;
+        margin-left: 10.25rem;
+    }
+
     .Pricing .packages {
         margin-inline: 10.25rem;
         gap: 1.875rem;
