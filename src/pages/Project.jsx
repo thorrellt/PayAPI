@@ -15,35 +15,31 @@ export default function Project(props) {
             <p>
                 I'm a Washington Metropolitan based Software Developer transitioning into tech after 15+ years in public relations & customer service.
             </p>
-            <div className="portfolio-wrapper">
+            <div className="portfolio-wrapper flex-container">
                 <p>
-                    For more of my work, you can visit my portfolio below.
+                    In order to learn more about me, view my work, or contact me, please visit my links below.
                 </p>
                 <button className="prim-btn">
                     My Portfolio
                 </button>
             </div>
-            <div className="my-links">
+            <div className="my-links flex-container">
                 <a href="https://github.com/thorrellt" target="_blank"
                     rel="noopener noreferrer" title="github.com/thorrellt">
-                    <button className="sec-btn-light">
-                        <i className="devicon-github-original" />
-                    </button>
+                        <i className="bi bi-github" />
                 </a>
 
 
                 <a href="https://www.linkedin.com/in/thorrellt/" target="_blank"
-                    rel="noopener noreferrer" title="github.com/thorrellt">
-                    <button className="sec-btn-light">
-                        <i className="devicon-linkedin-plain" />
-                    </button>
+                    rel="noopener noreferrer" title="linkedin.com/in/thorrellt">
+                        <i className="bi bi-linkedin" />
+                    
                 </a>
 
                 <a href="mailto:thorrellt@gmail.com" target="_blank"
                     rel="noopener noreferrer" title="thorrellt@gmail.com">
-                    <button className="sec-btn-light">
                         <i className="bi bi-envelope" />
-                    </button>
+                   
                 </a>
 
             </div>
