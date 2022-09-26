@@ -19,27 +19,31 @@ export default function Project(props) {
                 <p>
                     In order to learn more about me, view my work, or contact me, please visit my links below.
                 </p>
-                <button className="prim-btn">
-                    My Portfolio
-                </button>
+                <a href="https://www.thorrellt.com/" target="_blank" rel="noopener noreferrer"
+                    title="www.thorrellt.com" >
+                    <button className="prim-btn">
+                        My Portfolio
+                    </button>
+                </a>
+
             </div>
             <div className="my-links flex-container">
                 <a href="https://github.com/thorrellt" target="_blank"
                     rel="noopener noreferrer" title="github.com/thorrellt">
-                        <i className="bi bi-github" />
+                    <i className="bi bi-github" />
                 </a>
 
 
                 <a href="https://www.linkedin.com/in/thorrellt/" target="_blank"
                     rel="noopener noreferrer" title="linkedin.com/in/thorrellt">
-                        <i className="bi bi-linkedin" />
-                    
+                    <i className="bi bi-linkedin" />
+
                 </a>
 
                 <a href="mailto:thorrellt@gmail.com" target="_blank"
                     rel="noopener noreferrer" title="thorrellt@gmail.com">
-                        <i className="bi bi-envelope" />
-                   
+                    <i className="bi bi-envelope" />
+
                 </a>
 
             </div>
