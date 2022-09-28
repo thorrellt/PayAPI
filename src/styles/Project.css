@@ -60,3 +60,35 @@
 .Project a i {
     font-size: 2.5rem;
 }
+
+/********
+  TABLET
+ ********/
+ @media (min-width: 680px) {
+    .Project {
+        padding-block-start: 10.25rem;
+        margin-inline: 2.5rem;
+        margin-block-end: 4.5rem;
+    }
+
+    .Project h2 {
+        font-size: 3rem;
+        margin-inline: 5.5rem;
+    }
+
+    .Project .img-container {
+        justify-content: center;
+        margin-block-start: 1.5rem;
+        border-radius: 32.5vw;
+        width: 65vw;
+        height: 65vw;
+    }
+
+ }
+
+ /********
+ DESKTOP
+ ********/
+@media (min-width: 992px) {
+
+}
