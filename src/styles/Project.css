@@ -6,6 +6,11 @@
     align-items: center;
 }
 
+.Project section {
+    flex-direction: column;
+    align-items: center;
+}
+
 .Project .img-container {
     justify-content: center;
     margin-block-start: 1.5rem;
@@ -32,9 +37,9 @@
     text-align: center;
 }
 
-.Project>p {
+/* .Project>p {
     margin-block-start: 2rem;
-}
+} */
 
 .Project .portfolio-wrapper {
     flex-direction: column;
@@ -47,12 +52,13 @@
     gap: 2rem;
 }
 
-.Project .portfolio-wrapper a{
+.Project .portfolio-wrapper > a{
     margin-inline: auto;
 }
 
 .Project .my-links {
     margin-block-start: 2rem;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
 }
@@ -73,7 +79,6 @@
 
     .Project h2 {
         font-size: 3rem;
-        margin-inline: 5.5rem;
     }
 
     .Project .img-container {
@@ -90,5 +95,53 @@
  DESKTOP
  ********/
 @media (min-width: 992px) {
+
+    .Project{
+        padding-block-start: 10.625rem;
+        margin-inline: 10.25rem;
+        margin-block-end: 6.25rem;
+    }
+
+    .Project h2 {
+        font-size: 3.5rem;
+        text-align: left;
+        align-self: flex-start;
+    }
+
+    .Project section {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+    .Project .portfolio-wrapper {
+        flex: 0 1 40%;
+    }
+
+    .Project p {
+        text-align: left;
+    }
+
+    .Project .portfolio-wrapper > a {
+        align-self: flex-start;
+        margin-inline: 0;
+    }
+
+    .Project .my-links {
+        margin-block-start: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+
+    .Project .img-container {
+        flex-shrink: 0;
+        flex-basis: 60%;
+        width: 40vw;
+        height: 40vw;
+        max-width: 40vw;
+        max-height: 40vw;
+    }
 
 }
