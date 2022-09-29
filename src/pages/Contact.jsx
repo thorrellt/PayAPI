@@ -125,21 +125,27 @@ export default function Contact(props) {
 
         const isValid = re.test(formState.email.value
             .toLowerCase())
-        if(!isValid) makeInvalid('email')   
+        return isValid   
     }
 
     const onSumbitClick = (event) => {
         event.preventDefault()
-        checkEmailValidity()
+        let isFormValid = true
         for (const inputField in formState) {
             if (inputField !== 'updates' &&
-                formState[inputField].value === '') {
+            formState[inputField].value === '') {
                 makeInvalid(inputField)
+                isFormValid = false
             }
         }
 
+        if(!checkEmailValidity()) {
+            makeInvalid('email')
+            isFormValid = false
+        }
+
         checkFormValidity()
-        setModalVisible(formValid)
+        setModalVisible(isFormValid)
 
 
     }
