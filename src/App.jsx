@@ -60,7 +60,9 @@ function App() {
       <Footer windowWidth={windowWidth} />
 
       {location.pathname !== '/PayAPI' &&
-        location.pathname !== '/PayAPI/project' && <Circle />}
+        location.pathname !== '/PayAPI/project' &&
+        location.pathname !== '/PayAPI/' &&  
+        <Circle />}
     </div>
   )
 }
