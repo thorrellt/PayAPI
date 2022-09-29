@@ -6,7 +6,7 @@ import hewlettPackard from '../assets/shared/desktop/hewlett-packard.svg'
 import oracle from '../assets/shared/desktop/oracle.svg'
 import google from '../assets/shared/desktop/google.svg'
 import nvidia from '../assets/shared/desktop/nvidia.svg'
-
+import SubmitModal from '../components/contact/SubmitModal'
 import '../styles/Contact.css'
 
 
@@ -39,6 +39,13 @@ export default function Contact(props) {
     })
 
     const [formValid, setFormValid] = useState(() => true)
+
+    const [modalVisible, setModalVisible] = useState(() => false)
+
+    const closeModal = () => {
+        setModalVisible(false)
+        console.log('modal closed')
+    }
 
     const makeInvalid = (inputField) => {
         setFormState(prevFormState => ({
@@ -81,11 +88,13 @@ export default function Contact(props) {
     }
 
     const checkFormValidity = () => {
+        let isValid = true
         setFormValid(true)
         for (const inputField in formState) {
             if (inputField !== 'updates' &&
                 formState[inputField].valid === false) {
                 setFormValid(false)
+                isValid = false
             }
         }
     }
@@ -98,6 +107,8 @@ export default function Contact(props) {
         formState.message.valid
         ]
     )
+
+
 
     const onCheckClick = () => {
         setFormState(prevFormState => ({
@@ -128,6 +139,8 @@ export default function Contact(props) {
         }
 
         checkFormValidity()
+        setModalVisible(formValid)
+
 
     }
 
@@ -136,7 +149,8 @@ export default function Contact(props) {
             <div className="title-wrapper">
                 <h2>Submit a help request and we’ll get in touch shortly.</h2>
             </div>
-
+            {modalVisible && 
+            <SubmitModal closeModal = {closeModal}/>}
             <form className='flex-container'>
                 <div className="input-container flex-container">
                     {formState.name.valid === false && <span className="input-error">This field can't be empty</span>}

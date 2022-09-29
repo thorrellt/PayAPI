@@ -59,6 +59,30 @@
     filter: invert(30%) sepia(48%) saturate(410%) hue-rotate(165deg) brightness(88%) contrast(91%)
 }
 
+.SubmitModal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    padding: 2rem;
+
+    border-radius: 25px;
+
+    background-color: var(--sec-blue-500);
+    opacity: 1;
+}
+
+.SubmitModal img {
+    position: absolute;
+    right: 10%;
+    top: 10%;
+}
+.SubmitModal h3,
+.SubmitModal p{
+    color: var(--neutral-white);
+}
+
 /********
   TABLET
  ********/
