@@ -130,7 +130,7 @@ export default function Contact(props) {
 
             <form className='flex-container'>
                 <div className="input-container flex-container">
-                    {formState.name === '' && <span className="input-error">This field can't be empty</span>}
+                    {formState.name.valid === false && <span className="input-error">This field can't be empty</span>}
                     <input
                         onChange={onFormChange}
                         type="text"
@@ -142,6 +142,7 @@ export default function Contact(props) {
                 </div>
 
                 <div className="input-container flex-container">
+                    {formState.email.valid === false && <span className="input-error">Must include a valid email</span>}
                     <input
                         onChange={onFormChange}
                         type="email"
@@ -151,6 +152,7 @@ export default function Contact(props) {
                 </div>
 
                 <div className="input-container flex-container">
+                    {formState.company.valid === false && <span className="input-error">This field can't be empty</span>}
                     <input
                         onChange={onFormChange}
                         type="text"
@@ -161,6 +163,7 @@ export default function Contact(props) {
                 </div>
 
                 <div className="input-container flex-container">
+                    {formState.title.valid === false && <span className="input-error">This field can't be empty</span>}
                     <input
                         onChange={onFormChange}
                         type="text"
@@ -171,6 +174,7 @@ export default function Contact(props) {
                 </div>
 
                 <div className="input-container flex-container">
+                    {formState.message.valid === false && <span className="input-error">This field can't be empty</span>}
                     <textarea
                         onChange={onFormChange}
                         id='message'
