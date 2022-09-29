@@ -4,8 +4,7 @@ import close from '../../assets/shared/mobile/close.svg'
 
 
 export default function Contact(props) {
-    const closeModal = props.closeModal
-
+    const closeModal = props.onCloseModalClick
 
     return (
         <div className="SubmitModal">

@@ -6,11 +6,15 @@ import hewlettPackard from '../assets/shared/desktop/hewlett-packard.svg'
 import oracle from '../assets/shared/desktop/oracle.svg'
 import google from '../assets/shared/desktop/google.svg'
 import nvidia from '../assets/shared/desktop/nvidia.svg'
+
 import SubmitModal from '../components/contact/SubmitModal'
 import '../styles/Contact.css'
 
 
 export default function Contact(props) {
+    /*****************************
+      CONTROLLED FORM & FUNCTIONS
+     *****************************/
     const [formState, setFormState] = useState({
         name: {
             value: '',
@@ -38,36 +42,46 @@ export default function Contact(props) {
         }
     })
 
-    const [formValid, setFormValid] = useState(() => true)
-
-    const [modalVisible, setModalVisible] = useState(() => false)
-
-    const closeModal = () => {
-        setModalVisible(false)
-        console.log('modal closed')
+    const clearFormState = () => {
+        setFormState({
+            name: {
+                value: '',
+                valid: true
+            },
+            email: {
+                value: '',
+                valid: true
+            },
+            company: {
+                value: '',
+                valid: true
+            },
+            title: {
+                value: '',
+                valid: true
+            },
+            message: {
+                value: '',
+                valid: true
+            },
+            updates: {
+                value: false,
+                valid: true
+            }
+        })
     }
 
-    const makeInvalid = (inputField) => {
+    const makeFieldInvalid = (inputField) => {
         setFormState(prevFormState => ({
             ...prevFormState,
             [inputField]: {
                 ...prevFormState.inputField,
                 valid: false
             }
-            
+
         }))
         console.log(inputField + ' changed')
-        
-    }
 
-    const makeValid = (inputField) => {
-        setFormState(prevFormState => ({
-            ...prevFormState,
-            [inputField]: {
-                ...prevFormState.inputField,
-                valid: true
-            }
-        }))
     }
 
     const onFormChange = (event) => {
@@ -84,9 +98,14 @@ export default function Contact(props) {
                     valid: true
                 }
             }))
-
     }
 
+    const [formValid, setFormValid] = useState(() => true)
+    const [modalVisible, setModalVisible] = useState(() => false)
+
+    /*****************************
+      FORM & FIELD VALIDITY FUNCTIONS
+     *****************************/
     const checkFormValidity = () => {
         let isValid = true
         setFormValid(true)
@@ -99,6 +118,15 @@ export default function Contact(props) {
         }
     }
 
+    const checkEmailValidity = () => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+        const isValid = re.test(formState.email.value
+            .toLowerCase())
+        return isValid
+    }
+
+    //used to manage when submit button is disabled
     useEffect(checkFormValidity,
         [formState.name.valid,
         formState.email.valid,
@@ -108,7 +136,13 @@ export default function Contact(props) {
         ]
     )
 
-
+    /********************
+      ON CLICK FUNCTIONS
+     ********************/
+    const onCloseModalClick = () => {
+        setModalVisible(false)
+        console.log('modal closed')
+    }
 
     const onCheckClick = () => {
         setFormState(prevFormState => ({
@@ -120,34 +154,29 @@ export default function Contact(props) {
         }))
     }
 
-    const checkEmailValidity = () => {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-        const isValid = re.test(formState.email.value
-            .toLowerCase())
-        return isValid   
-    }
-
     const onSumbitClick = (event) => {
         event.preventDefault()
+
         let isFormValid = true
+
         for (const inputField in formState) {
             if (inputField !== 'updates' &&
-            formState[inputField].value === '') {
-                makeInvalid(inputField)
+                formState[inputField].value === '') {
+                makeFieldInvalid(inputField)
                 isFormValid = false
+                setFormValid(false)
             }
         }
 
-        if(!checkEmailValidity()) {
-            makeInvalid('email')
+        if (!checkEmailValidity()) {
+            makeFieldInvalid('email')
             isFormValid = false
         }
 
-        checkFormValidity()
-        setModalVisible(isFormValid)
-
-
+        if (isFormValid) {
+            setModalVisible(true)
+            clearFormState()
+        }
     }
 
     return (
@@ -155,8 +184,12 @@ export default function Contact(props) {
             <div className="title-wrapper">
                 <h2>Submit a help request and we’ll get in touch shortly.</h2>
             </div>
-            {modalVisible && 
-            <SubmitModal closeModal = {closeModal}/>}
+
+            {modalVisible &&
+                <SubmitModal
+                    onCloseModalClick={onCloseModalClick}
+                />}
+
             <form className='flex-container'>
                 <div className="input-container flex-container">
                     {formState.name.valid === false && <span className="input-error">This field can't be empty</span>}
@@ -232,7 +265,6 @@ export default function Contact(props) {
                     disabled={!formValid}>
                     Submit
                 </button>
-
             </form>
 
             <section className="clients">
@@ -248,9 +280,7 @@ export default function Contact(props) {
                     <img src={google} alt="google" className="logo" />
                     <img src={nvidia} alt="nvidia" className="logo" />
                 </div>
-
             </section>
-
         </main>
     )
 }

@@ -69,18 +69,26 @@
 
     border-radius: 25px;
 
-    background-color: var(--sec-blue-500);
+    background-color: var(--neutral-white);
+    filter: drop-shadow(2px 3px 10px rgba(0, 0, 0, .5));
     opacity: 1;
 }
 
 .SubmitModal img {
     position: absolute;
-    right: 10%;
-    top: 10%;
+    right: 7%;
+    top: 7%;
+    filter: invert(82%) sepia(26%) saturate(93%) hue-rotate(195deg) brightness(114%) contrast(99%);
 }
+
 .SubmitModal h3,
 .SubmitModal p{
-    color: var(--neutral-white);
+    color: var(--sec-blue-700);
+    text-align: center;
+}
+
+.SubmitModal p{
+    margin-block-start: 1rem;
 }
 
 /********
