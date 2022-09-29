@@ -236,6 +236,10 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: auto;
+}
+
 .prim-btn {
   color: var(--neutral-white);
   background-color: var(--prim-pink-500);

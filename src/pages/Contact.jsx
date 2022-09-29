@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import tesla from '../assets/shared/desktop/tesla.svg'
 import microsoft from '../assets/shared/desktop/microsoft.svg'
@@ -38,6 +38,8 @@ export default function Contact(props) {
         }
     })
 
+    const [formValid, setFormValid] = useState(() => true)
+
     const makeInvalid = (inputField) => {
         setFormState(prevFormState => ({
             ...prevFormState,
@@ -68,10 +70,33 @@ export default function Contact(props) {
                 ...prevFormState,
                 [name]: {
                     ...prevFormState.name,
-                    value: newValue
+                    value: newValue,
+                    valid: true
                 }
             }))
+
     }
+
+    const checkFormValidity = () => {
+        setFormValid(true)
+        for (const inputField in formState) {
+            if (inputField !== 'updates' &&
+                formState[inputField].valid === false) {
+                setFormValid(false)
+            }
+        }
+    }
+
+    useEffect(checkFormValidity,
+        [formState.name.valid,
+        formState.email.valid,
+        formState.company.valid,
+        formState.title.valid,
+        formState.message.valid
+        ]
+    )
+
+
 
     const onCheckClick = () => {
         setFormState(prevFormState => ({
@@ -85,18 +110,18 @@ export default function Contact(props) {
 
     const onSumbitClick = (event) => {
         event.preventDefault()
-        let formValid = true
         for (const inputField in formState) {
-            if (inputField !== 'updates' && 
+            if (inputField !== 'updates' &&
                 formState[inputField].value === '') {
                 makeInvalid(inputField)
-                formValid = false
             }
         }
+        checkFormValidity()
+
     }
 
 
-
+    console.table(formValid)
     return (
         <main className='Contact flex-container'>
             <div className="title-wrapper">
@@ -170,7 +195,8 @@ export default function Contact(props) {
 
                 <button
                     onClick={onSumbitClick}
-                    className='sec-btn-light submit-btn'>
+                    className='sec-btn-light submit-btn'
+                    disabled={!formValid}>
                     Submit
                 </button>
 
