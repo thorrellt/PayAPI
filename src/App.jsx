@@ -42,6 +42,10 @@ function App() {
     }
   }, [])
 
+  //scroll to top on page change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
 
   const onCheckClick = () => {

@@ -18,7 +18,7 @@ export default function Footer() {
             </div>
 
             <footer className='flex-container'>
-            <NavLink to="/PayAPI">
+                <NavLink to="/PayAPI">
                     <img src={logo} alt="PayAPI logo"
                         className='logo' />
                 </NavLink>
