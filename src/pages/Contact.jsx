@@ -12,32 +12,90 @@ import '../styles/Contact.css'
 
 export default function Contact(props) {
     const [formState, setFormState] = useState({
-        name: '',
-        email: '',
-        company: '',
-        title: '',
-        message: '',
-        updates: false
+        name: {
+            value: '',
+            valid: true
+        },
+        email: {
+            value: '',
+            valid: true
+        },
+        company: {
+            value: '',
+            valid: true
+        },
+        title: {
+            value: '',
+            valid: true
+        },
+        message: {
+            value: '',
+            valid: true
+        },
+        updates: {
+            value: false,
+            valid: true
+        }
     })
+
+    const makeInvalid = (inputField) => {
+        setFormState(prevFormState => ({
+            ...prevFormState,
+            [inputField]: {
+                ...prevFormState.inputField,
+                valid: false
+            }
+        }))
+    }
+
+    const makeValid = (inputField) => {
+        setFormState(prevFormState => ({
+            ...prevFormState,
+            [inputField]: {
+                ...prevFormState.inputField,
+                valid: true
+            }
+        }))
+    }
 
     const onFormChange = (event) => {
         const name = event.target.id
-        const value = event.target.value
+        const newValue = event.target.value
         const type = event.target.type
 
         if (type != "checkbox")
-        setFormState(prevFormState => ({
-            ...prevFormState,
-            [name]:value 
-        }))
+            setFormState(prevFormState => ({
+                ...prevFormState,
+                [name]: {
+                    ...prevFormState.name,
+                    value: newValue
+                }
+            }))
     }
 
     const onCheckClick = () => {
-        setFormState(prevIsChecked => ({
+        setFormState(prevFormState => ({
             ...formState,
-            updates: !formState.updates
+            updates: {
+                ...prevFormState,
+                value: !formState.updates.value
+            }
         }))
     }
+
+    const onSumbitClick = (event) => {
+        event.preventDefault()
+        let formValid = true
+        for (const inputField in formState) {
+            if (inputField !== 'updates' && 
+                formState[inputField].value === '') {
+                makeInvalid(inputField)
+                formValid = false
+            }
+        }
+    }
+
+
 
     return (
         <main className='Contact flex-container'>
@@ -47,51 +105,52 @@ export default function Contact(props) {
 
             <form className='flex-container'>
                 <div className="input-container flex-container">
-                    <input 
-                    onChange={onFormChange} 
-                    type="text" 
-                    id='name' 
-                    name='name'
-                    value={formState.name} />
+                    {formState.name === '' && <span className="input-error">This field can't be empty</span>}
+                    <input
+                        onChange={onFormChange}
+                        type="text"
+                        id='name'
+                        name='name'
+                        value={formState.name.value} />
                     <label htmlFor="name">Name</label>
 
                 </div>
 
                 <div className="input-container flex-container">
-                    <input 
-                    onChange={onFormChange} 
-                    type="email" 
-                    id='email' name='email'
-                    value={formState.email}  />
+                    <input
+                        onChange={onFormChange}
+                        type="email"
+                        id='email' name='email'
+                        value={formState.email.value} />
                     <label htmlFor="email">Email</label>
                 </div>
 
                 <div className="input-container flex-container">
-                    <input 
-                    onChange={onFormChange} 
-                    type="text" 
-                    id='company' 
-                    name='company'
-                    value={formState.company}  />
+                    <input
+                        onChange={onFormChange}
+                        type="text"
+                        id='company'
+                        name='company'
+                        value={formState.company.value} />
                     <label htmlFor="company">Company Name</label>
                 </div>
 
                 <div className="input-container flex-container">
-                    <input 
-                    onChange={onFormChange} 
-                    type="text" 
-                    id='title' 
-                    name='title'
-                    value={formState.title}  />
+                    <input
+                        onChange={onFormChange}
+                        type="text"
+                        id='title'
+                        name='title'
+                        value={formState.title.value} />
                     <label htmlFor="title">Title</label>
                 </div>
 
                 <div className="input-container flex-container">
-                    <textarea 
-                    onChange={onFormChange} 
-                    id='message' 
-                    name='message' 
-                    value={formState.message} />
+                    <textarea
+                        onChange={onFormChange}
+                        id='message'
+                        name='message'
+                        value={formState.message.value} />
                     <label htmlFor="message">Message</label>
                 </div>
 
@@ -99,9 +158,9 @@ export default function Contact(props) {
                     <label className="checkbox-wrapper flex-container">
                         <input
                             type="checkbox"
-                            checked={formState.updates}
+                            checked={formState.updates.value}
                             onClick={onCheckClick}
-                            onChange={onFormChange}  />
+                            onChange={onFormChange} />
                         <span className="checkmark" />
                         <p>
                             Stay up-to-date with company announcements and updates to our API
@@ -109,7 +168,9 @@ export default function Contact(props) {
                     </label>
                 </div>
 
-                <button className='sec-btn-light submit-btn'>
+                <button
+                    onClick={onSumbitClick}
+                    className='sec-btn-light submit-btn'>
                     Submit
                 </button>
 

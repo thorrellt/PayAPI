@@ -129,8 +129,8 @@ h6 {
  ********************/
 h1 {
   font-size: 4.5rem;
-  line-height: 4.5rem;.
-  letter-spacing: -0.553846px;
+  line-height: 4.5rem;
+  . letter-spacing: -0.553846px;
 }
 
 h2 {
@@ -317,6 +317,10 @@ button {
 }
 
 .input-error {
+  padding-block-start: .5rem;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.688rem;
+  line-height: 0.813rem;
   opacity: 1;
   color: var(--error-red);
   border-color: var(--error-red);
