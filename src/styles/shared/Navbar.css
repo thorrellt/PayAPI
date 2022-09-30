@@ -157,6 +157,16 @@
     }
     .Navbar ul li a{
         color: var(--sec-blue-500);
+        transition: all .2s ease-in-out;
+    }
+
+    .Navbar ul li a:hover{
+        font-size: 1.2rem;
+    }
+
+    .Navbar ul li .active{
+        font-weight: 700;
+        text-decoration: underline;
     }
 
     .Navbar .menu-wrapper .prim-btn {

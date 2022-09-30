@@ -103,9 +103,9 @@ export default function Contact(props) {
     const [formValid, setFormValid] = useState(() => true)
     const [modalVisible, setModalVisible] = useState(() => false)
 
-    /*****************************
+    /*********************************
       FORM & FIELD VALIDITY FUNCTIONS
-     *****************************/
+     *********************************/
     const checkFormValidity = () => {
         let isValid = true
         setFormValid(true)
