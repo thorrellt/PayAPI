@@ -15,3 +15,8 @@
     border: none;
     border-radius: 24px;
 }
+
+.cta-form .input-error {
+    padding-inline-start: 1.5rem;
+    padding-block-start: 0;
+}

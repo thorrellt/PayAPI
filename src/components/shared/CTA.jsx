@@ -20,7 +20,7 @@ export default function CTA() {
             valid: isValid
 
         }))
-        
+
         if (isValid)
             setFormValid(isValid)
     }
@@ -55,19 +55,22 @@ export default function CTA() {
 
     return (
         <form className="cta-form flex-container">
-            {!formValid && <span className="input-error">This field can't be empty</span>}
             <input
                 onChange={onEmailChange}
                 type="email"
                 className='email'
                 placeholder='Enter email address'
                 value={emailState.value} />
+
+            {!formValid && <span className="input-error">This field can't be empty</span>}
+            
             <button
                 onClick={onSumbitClick}
                 className='prim-btn submit-btn'
                 disabled={!formValid}>
                 Schedule a Demo
             </button>
+
         </form>
     )
 }
