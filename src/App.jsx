@@ -10,7 +10,6 @@ import Footer from './components/shared/Footer'
 import Circle from './components/shared/Circle'
 import {
   Outlet,
-  ScrollRestoration,
   useLocation
 } from "react-router-dom";
 import bgCircle from './assets/shared/desktop/bg-pattern-circle.svg'
@@ -44,7 +43,10 @@ function App() {
 
   //scroll to top on page change
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+      console.log('location updated')
+    }, 10)
   }, [location]);
 
 
@@ -55,13 +57,12 @@ function App() {
   return (
     <div className="App">
       <Navbar windowWidth={windowWidth} />
-      <ScrollRestoration />
       <Outlet />
       <Footer windowWidth={windowWidth} />
 
       {location.pathname !== '/PayAPI' &&
         location.pathname !== '/PayAPI/project' &&
-        location.pathname !== '/PayAPI/' &&  
+        location.pathname !== '/PayAPI/' &&
         <Circle />}
     </div>
   )
