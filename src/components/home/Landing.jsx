@@ -8,7 +8,7 @@ import bgCircle from '../../assets/shared/desktop/bg-pattern-circle.svg'
 
 export default function Landing() {
     return (
-        <div className="Landing">
+        <section className="Landing">
             <Circle />
             <div className="flex-container hero-img-wrapper">
                 <img src={phoneMockup}
@@ -23,6 +23,6 @@ export default function Landing() {
                 <p>Have any questions? <a href="#">Contact Us</a></p>
 
             </div>
-        </div >
+        </section >
     )
 }

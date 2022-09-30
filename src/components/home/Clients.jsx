@@ -13,7 +13,7 @@ import nvidia from '../../assets/shared/desktop/nvidia.svg'
 
 export default function Clients() {
     return (
-        <div className="Clients flex-container">
+        <section className="Clients flex-container">
             <div className="client-logos">
                 <img src={tesla} alt="tesla" className="logo" />
                 <img src={microsoft} alt="microsoft" className="logo" />
@@ -33,6 +33,6 @@ export default function Clients() {
                 </button>
             </div>
             <Circle />
-        </div>
+        </section>
     )
 }

@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <div className="Footer">
+        <section className="Footer">
             <div className="cta">
                 <h2>Ready to start?</h2>
                 <CTA />
@@ -53,6 +53,6 @@ export default function Footer() {
                 <Circle />
             </footer>
 
-        </div>
+        </section>
     )
 }

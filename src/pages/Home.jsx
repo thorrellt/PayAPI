@@ -7,7 +7,7 @@ import Hero from '../components/home/Hero'
 
 export default function Home(props) {
     return (
-        <div className="Home" id='Home'>
+        <main className="Home" id='Home'>
             <Landing
                 windowWidth={props.windowWidth}
             />
@@ -18,6 +18,6 @@ export default function Home(props) {
                 windowWidth={props.windowWidth}
             />
 
-        </div>
+        </main>
     )
 }

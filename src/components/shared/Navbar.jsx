@@ -50,7 +50,7 @@ export default function Navbar(props) {
     }
 
     return (
-        <div className="Navbar flex-container" id='Navbar'>
+        <nav className="Navbar flex-container" id='Navbar'>
             {windowWidth < breakWidth &&
                 <NavLink to="/PayAPI" className='logo-link'>
                     <img src={logo} alt="PayAPI logo"
@@ -93,6 +93,6 @@ export default function Navbar(props) {
                 </ul>
                 <button className="prim-btn">Schedule a Demo</button>
             </div>
-        </div>
+        </nav>
     )
 }

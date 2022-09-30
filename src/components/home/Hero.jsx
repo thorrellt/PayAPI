@@ -10,7 +10,7 @@ import Circle from '../shared/Circle'
 
 export default function Hero(props) {
     return (
-        <div className="Hero flex-container">
+        <section className="Hero flex-container">
             <div className="detail-wrapper flex-container">
 
                 <img src={imgImplement} alt="Easy to Impliment" />
@@ -59,6 +59,6 @@ export default function Hero(props) {
                 </div>
             </div>
             <Circle />
-        </div>
+        </section>
     )
 }
