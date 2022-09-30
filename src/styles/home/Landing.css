@@ -142,3 +142,10 @@
         height: 780px;
     }
 }
+
+/************
+  ANIMATIONS
+ ************/
+ .Landing .phone-mockup {
+    animation: fadeIn ease-in 2s;
+}

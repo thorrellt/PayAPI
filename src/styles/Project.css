@@ -143,5 +143,11 @@
         max-width: 40vw;
         max-height: 40vw;
     }
+}
 
+/************
+  ANIMATIONS
+ ************/
+.Project .img-container > img{
+    animation: fadeIn ease-in 2s;
 }
