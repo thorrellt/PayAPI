@@ -12,6 +12,8 @@
 
   --neutral-white: hsl(220, 60%, 99%);
   /* #fbfcfe */
+  --neutral-white-700: hsl(207, 44%, 95%);
+  /* #EDF3F8 */
 
   --error-red: #FF0000;
 
@@ -36,6 +38,7 @@
   font-weight: 400;
 
   scroll-behavior: smooth;
+  background-color: var(--neutral-white-700);
 
 }
 
