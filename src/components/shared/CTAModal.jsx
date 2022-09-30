@@ -3,7 +3,7 @@ import close from '../../assets/shared/mobile/close.svg'
 
 
 
-export default function SubmitModal(props) {
+export default function CTAModal(props) {
     const closeModal = props.onCloseModalClick
 
     return (
