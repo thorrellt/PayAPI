@@ -79,7 +79,7 @@ export default function CTA() {
                 placeholder='Enter email address'
                 value={emailState.value} />
 
-            {!formValid && <span className="input-error">This field can't be empty</span>}
+            {!formValid && <span className="input-error">Please input a valid email address</span>}
 
             <button
                 onClick={onSumbitClick}

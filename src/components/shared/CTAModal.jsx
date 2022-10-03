@@ -12,7 +12,7 @@ export default function CTAModal(props) {
                 <img src={close} className='close' />
             </button>
             <h3>Thank you</h3>
-            <p>lets pretend like your information was actually sent at this time</p>
+            <p>lets pretend like an email was sent at this time</p>
             <p>Ok, byeee!!</p>
         </div>
 
