@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../../styles/home/Clients.css'
 
 import Circle from '../shared/Circle'
+import { NavLink } from 'react-router-dom'
 
 import tesla from '../../assets/shared/desktop/tesla.svg'
 import microsoft from '../../assets/shared/desktop/microsoft.svg'
@@ -28,9 +29,15 @@ export default function Clients() {
                 <p>
                     Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users.
                 </p>
-                <button className="sec-btn-dark about-us-btn">
-                    About Us
-                </button>
+
+
+                <NavLink to="/PayAPI/about">
+                    <button className="sec-btn-dark about-us-btn">
+                        About Us
+                    </button>
+                </NavLink>
+
+
             </div>
             <Circle />
         </section>
